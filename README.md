@@ -7,7 +7,7 @@
 [![Tests](https://img.shields.io/badge/tests-28%20passed-2ea44f)](tests/)
 [![License](https://img.shields.io/badge/license-review%20before%20distribution-lightgrey)](#license-and-model-licenses)
 
-VoltAgent is designed as a practical engineering assistant rather than a single monolithic model wrapper. The application keeps deterministic work local, treats retrieved text and detector output as evidence, and delegates open-ended explanation to a configured conversational provider such as DeepSeek through an OpenAI-compatible API.
+VoltAgent is for engineers, students, and researchers who need to ask electrical questions, retrieve source-grounded explanations from the Kuphaldt corpus, calculate circuit quantities deterministically, and analyze circuit images with optional YOLO and multimodal LLM assistance.
 
 ## Table of contents
 
