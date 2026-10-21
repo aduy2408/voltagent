@@ -12,7 +12,6 @@ VoltAgent is designed as a practical engineering assistant rather than a single 
 ## Table of contents
 
 - [What it does](#what-it-does)
-- [Architecture](#architecture)
 - [Repository layout](#repository-layout)
 - [Quick start](#quick-start)
 - [Configuration](#configuration)
@@ -23,7 +22,6 @@ VoltAgent is designed as a practical engineering assistant rather than a single 
 - [Metrics glossary](#metrics-glossary)
 - [Testing and quality checks](#testing-and-quality-checks)
 - [Development workflow](#development-workflow)
-- [Limitations and roadmap](#limitations-and-roadmap)
 - [License and model licenses](#license-and-model-licenses)
 
 ## What it does
@@ -49,60 +47,6 @@ VoltAgent is designed as a practical engineering assistant rather than a single 
 3. **Optional dependencies fail safely.** The text assistant can run without YOLO, TensorRT, dense retrieval packages, or a local LLM.
 4. **Evaluation claims stay scoped.** Detector localization metrics, retrieval metrics, and LLM inventory metrics are reported separately.
 5. **Hardware-specific artifacts are built on the target machine.** TensorRT engines are not portable across arbitrary CUDA, GPU, or TensorRT versions.
-
-## Architecture
-
-```mermaid
-flowchart TD
-    U[User] --> UI[Browser UI]
-    UI --> API[FastAPI application]
-    API --> S[SQLite session store]
-    API --> C[Deterministic calculators]
-    API --> R[Retrieval pipeline]
-    API --> V[Vision pipeline]
-    API --> L[Configured LLM provider]
-
-    R --> P[Parser and chunker]
-    R --> D[Dense FAISS index]
-    R --> B[BM25 or hybrid experiments]
-    R --> X[Optional cross-encoder reranker]
-    R --> L
-
-    V --> I[Upload validation]
-    V --> Q{Image route}
-    Q -->|vision| L
-    Q -->|yolo| Y[YOLO detector]
-    Y --> T[PyTorch, ONNX, or TensorRT]
-    Y --> L
-
-    L --> O[Answer with citations, caveats, and confidence]
-```
-
-### Text chat flow
-
-```text
-User message
-  -> session persistence
-  -> deterministic calculation detection
-  -> dense retrieval when available
-  -> legacy hash-vector fallback when needed
-  -> optional reranking
-  -> configured LLM
-  -> answer plus source citations
-```
-
-### Image chat flow
-
-```text
-Image upload
-  -> file validation and image_id
-  -> LLM route decision: yolo or vision
-  -> optional YOLO component detection
-  -> original image plus detector evidence to the LLM
-  -> user-facing explanation with confidence and caveats
-```
-
-The detector is not treated as a circuit solver. Bounding boxes do not establish electrical connectivity, component values, ratings, polarity, or circuit operation.
 
 ## Repository layout
 
@@ -418,25 +362,6 @@ For DeepSeek-only and YOLO-plus-DeepSeek, the benchmark asks the model for visib
 
 The strongest dense Recall@10 result was 0.9503, shared by Electrical EmbeddingGemma IR and Qwen3. The strongest reranked Recall@10 result was 0.9255 from Jina v5 nano retrieval. Reranking is therefore retained as an experiment, not enabled as an unconditional quality improvement.
 
-### Retrieval baseline: 36-question lexical evaluation
-
-The deterministic local baseline evaluates 36 manually reviewed queries against 1,893 chunks and 889 parsed sections:
-
-| Metric | Value |
-|---|---:|
-| Queries | 36 |
-| Chunks | 1,893 |
-| Sections | 889 |
-| Recall@5 | 0.5000 |
-| Recall@10 | 0.6667 |
-| MRR@10 | 0.3626 |
-| Parsing errors | 0 |
-| Index build time | 2.886 s |
-| Evaluation time | 1.478 s |
-| Total time | 4.364 s |
-
-This is a deterministic baseline for regression checks. It is not evidence that lexical retrieval is better than dense, hybrid, or reranked retrieval.
-
 ### Hybrid retrieval ablation
 
 The hybrid experiment used BM25 plus dense retrieval with `alpha=0.7`, 100 dense candidates, and 30 reranker candidates.
@@ -456,46 +381,17 @@ The hybrid experiment used BM25 plus dense retrieval with `alpha=0.7`, 100 dense
 
 Alternative reranker results for the three tested dense models are recorded in `benchmarks/results/hybrid_reranker_ablation.json`. The experiment notes that Jina reranker loading was skipped because its repository requires `trust_remote_code=True`.
 
-### YOLO backend performance
+### YOLO backend and CGHD accuracy
 
-This benchmark used 8 warmup iterations and 30 timed iterations on an NVIDIA CMP 40HX with CUDA available.
+The backend benchmark used 8 warmup iterations and 30 timed iterations on an NVIDIA CMP 40HX. The CGHD evaluator uses Pascal VOC XML annotations, maps 61 CGHD labels into the detector's 16 classes, and compares axis-aligned ground-truth boxes with YOLO OBB `xyxy` boxes at IoU 0.50.
 
-| Backend | Device | Mean latency | Median | P95 | Throughput | Notes |
-|---|---|---:|---:|---:|---:|---|
-| PyTorch | CUDA:0 | 16.470 ms | 16.013 ms | 18.085 ms | 60.715 FPS | Baseline |
-| ONNX | CUDA execution provider | 19.571 ms | 19.541 ms | 19.881 ms | 51.097 FPS | Provider plugin warning, not a clean all-GPU comparison |
-| TensorRT FP16 | CUDA:0 | **7.122 ms** | **7.089 ms** | **7.535 ms** | **140.408 FPS** | Fastest measured backend |
+| Backend | Device | Mean latency | Median | P95 | Throughput | CGHD detections | mAP50 | Precision | Recall | F1 | CGHD elapsed |
+|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| PyTorch | CUDA:0 | 16.470 ms | 16.013 ms | 18.085 ms | 60.715 FPS | 5,478 | 0.6000 | 0.8268 | 0.7848 | 0.8053 | 7.637 s |
+| ONNX | CUDA execution provider | 19.571 ms | 19.541 ms | 19.881 ms | 51.097 FPS | 4,450 | 0.5880 | 0.8262 | 0.7941 | 0.8098 | 4.957 s |
+| TensorRT FP16 | CUDA:0 | **7.122 ms** | **7.089 ms** | **7.535 ms** | **140.408 FPS** | 4,453 | 0.5877 | 0.8262 | 0.7941 | 0.8098 | 3.878 s |
 
-TensorRT was 2.31x faster than PyTorch and reduced mean latency by 56.8 percent in this benchmark.
-
-### CGHD YOLO accuracy on 50 images
-
-The evaluator uses Pascal VOC XML annotations, maps 61 CGHD labels into the detector's 16 classes, and compares axis-aligned ground-truth boxes with YOLO OBB `xyxy` boxes at IoU 0.50.
-
-| Backend | Detections | Mean detections/image | mAP50 | Precision | Recall | F1 | Elapsed |
-|---|---:|---:|---:|---:|---:|---:|---:|
-| PyTorch | 5,478 | 109.56 | 0.6000 | 0.8268 | 0.7848 | 0.8053 | 7.637 s |
-| ONNX | 4,450 | 89.00 | 0.5880 | 0.8262 | 0.7941 | 0.8098 | 4.957 s |
-| TensorRT | 4,453 | 89.06 | 0.5877 | 0.8262 | 0.7941 | 0.8098 | 3.878 s |
-
-Per-class AP50:
-
-| Class | PyTorch | ONNX | TensorRT |
-|---|---:|---:|---:|
-| resistor | 0.1882 | 0.1891 | 0.1893 |
-| terminal | 0.9802 | 0.9802 | 0.9802 |
-| crossover | 1.0000 | 1.0000 | 1.0000 |
-| capacitor | 0.0000 | 0.0000 | 0.0000 |
-| diode | 0.9543 | 0.9095 | 0.9097 |
-| transistor | 0.0000 | 0.0000 | 0.0000 |
-| switch | 1.0000 | 1.0000 | 1.0000 |
-| inductor | 0.0000 | 0.0000 | 0.0000 |
-| voltage_source | 0.0000 | 0.0000 | 0.0000 |
-| text | 0.9558 | 0.9630 | 0.9630 |
-| junction | 0.9348 | 0.9548 | 0.9547 |
-| gnd | 0.9959 | 0.9963 | 0.9973 |
-| integrated_circuit | 1.0000 | 1.0000 | 1.0000 |
-| other | 0.3907 | 0.2394 | 0.2335 |
+TensorRT was 2.31x faster than PyTorch and reduced mean latency by 56.8 percent. Per-class AP50 is retained in `benchmarks/results/yolo_accuracy_subset_2026-10-21.json`.
 
 Backend agreement at class-aware IoU 0.50 was 100 percent between ONNX and TensorRT for the measured detections. PyTorch matched 99.30 percent of its detections against ONNX/TensorRT under the reported agreement calculation.
 
@@ -613,29 +509,6 @@ uv run python -m benchmarks.scripts.evaluate_vision_modes \
   --max-new 10 \
   --output benchmarks/results/cghd_deepseek_only_2026-10-21.json
 ```
-
-## Limitations and roadmap
-
-### Current limitations
-
-- The CGHD vision benchmark uses a 50-image subset, not the full validation split.
-- CGHD labels are merged from 61 source labels into the detector's 16 evaluation classes.
-- Ground-truth Pascal VOC boxes are axis-aligned while YOLO predictions are OBB-derived `xyxy` boxes.
-- DeepSeek-only and hybrid inventory metrics do not evaluate localization.
-- Dense retrieval and reranking results come from separate benchmark environments and should be reproduced on the target machine before production decisions.
-- The application does not infer circuit connectivity from pixels.
-- Model outputs are not a substitute for engineering review or electrical safety procedures.
-- TensorRT performance depends on the exact GPU, CUDA, driver, TensorRT version, and engine build.
-- The conversational provider is required for live LLM answers.
-
-### Roadmap
-
-- Add a true structured multimodal benchmark with a defined semantic rubric for final answers.
-- Add a fair localization benchmark for any vision model that can emit image coordinates.
-- Render detection overlays and confidence summaries in the frontend.
-- Add graph-based circuit topology extraction with explicit uncertainty handling.
-- Add stronger end-to-end citation and answer-faithfulness evaluation.
-- Add CI jobs for tests, lint, packaging, and small deterministic benchmark fixtures.
 
 ## License and model licenses
 
