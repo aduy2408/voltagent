@@ -155,11 +155,24 @@ The CPU image is the smallest runtime. It includes the core API, calculators, se
 storage, and safe fallback retrieval path, but does not install the heavyweight dense or
 vision extras.
 
+Pull the published image from Docker Hub:
+
+```bash
+docker pull aduy2408/voltagent:cpu
+docker run --rm --env-file .env -p 8000:8000 \
+  -v "$(pwd)/data:/app/data" aduy2408/voltagent:cpu
+```
+
+Build the same image locally instead:
+
 ```bash
 docker build -t voltagent:cpu -f Dockerfile .
 docker run --rm --env-file .env -p 8000:8000 \
   -v "$(pwd)/data:/app/data" voltagent:cpu
 ```
+
+The published CPU image was verified with `GET /health` and is available as
+`aduy2408/voltagent:cpu`.
 
 ### GPU image
 
