@@ -12,6 +12,7 @@ VoltAgent is for engineers, students, and researchers who need to ask electrical
 ## Table of contents
 
 - [What it does](#what-it-does)
+- [Visualization](#visualization)
 - [Repository layout](#repository-layout)
 - [Quick start](#quick-start)
 - [Configuration](#configuration)
@@ -39,6 +40,21 @@ VoltAgent is for engineers, students, and researchers who need to ask electrical
 - Agent-style image routing between native vision and detector-assisted analysis.
 - Citation-aware responses when retrieved source context is available.
 - A framework-free browser UI served by FastAPI.
+
+## Visualization
+
+VoltAgent provides a dark, focused workspace for combining electrical-engineering questions
+with circuit-image analysis. The screenshots below show the same assistant workflow at two
+viewport sizes: upload a hand-drawn circuit, ask for an analysis, and receive a structured
+explanation of the likely topology, components, and component roles.
+
+### Desktop workspace
+
+![VoltAgent desktop chat workspace](docs/images/voltagent-chat-desktop.png)
+
+### Compact workspace
+
+![VoltAgent compact chat workspace](docs/images/voltagent-chat-responsive.png)
 
 ### Design principles
 
@@ -70,6 +86,7 @@ VoltAgent is for engineers, students, and researchers who need to ask electrical
 │   ├── documents/             Kuphaldt corpus and other local documents
 │   └── evaluation/cghd/       CGHD image and Pascal VOC annotation subset
 ├── frontend/                  Framework-free HTML, CSS, and JavaScript UI
+├── docs/images/               README screenshots and project visualizations
 ├── scripts/                   Model preparation, ingestion, inspection, and export tools
 ├── tests/                     Unit and API tests
 ├── .env.example               Configuration template
