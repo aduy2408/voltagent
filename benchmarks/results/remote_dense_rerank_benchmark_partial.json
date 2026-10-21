@@ -1,0 +1,67 @@
+{
+  "benchmark": "remote_dense_and_rerank",
+  "server": "sb-e36001b1b890beec.sb.molab.run",
+  "questions": 161,
+  "candidate_k": 30,
+  "reranker": "BAAI/bge-reranker-v2-m3",
+  "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "measured_models": [
+    {
+      "index": "kuphaldt-arctic-embed-l-v2",
+      "model": "Snowflake/snowflake-arctic-embed-l-v2.0",
+      "dense": {"recall_at_5": 0.8633540373, "recall_at_10": 0.9440993789, "mrr_at_10": 0.7426279207},
+      "reranked": {"recall_at_5": 0.8385093168, "recall_at_10": 0.9006211180, "mrr_at_10": 0.7084097407}
+    },
+    {
+      "index": "kuphaldt-bge-base-en-v1.5",
+      "model": "BAAI/bge-base-en-v1.5",
+      "dense": {"recall_at_5": 0.8322981366, "recall_at_10": 0.9068322981, "mrr_at_10": 0.6758306221},
+      "reranked": {"recall_at_5": 0.8322981366, "recall_at_10": 0.9130434783, "mrr_at_10": 0.7072389825}
+    },
+    {
+      "index": "kuphaldt-bge-large-en-v1.5",
+      "model": "BAAI/bge-large-en-v1.5",
+      "dense": {"recall_at_5": 0.8260869565, "recall_at_10": 0.9068322981, "mrr_at_10": 0.6705018239},
+      "reranked": {"recall_at_5": 0.8322981366, "recall_at_10": 0.9006211180, "mrr_at_10": 0.6924134871}
+    },
+    {
+      "index": "kuphaldt-bge-m3",
+      "model": "BAAI/bge-m3",
+      "dense": {"recall_at_5": 0.8447204969, "recall_at_10": 0.8881987578, "mrr_at_10": 0.7024548950},
+      "reranked": {"recall_at_5": 0.8260869565, "recall_at_10": 0.9006211180, "mrr_at_10": 0.6899364093}
+    },
+    {
+      "index": "kuphaldt-bge-small-en-v1.5",
+      "model": "BAAI/bge-small-en-v1.5",
+      "dense": {"recall_at_5": 0.8509316770, "recall_at_10": 0.9192546584, "mrr_at_10": 0.6553559105},
+      "reranked": {"recall_at_5": 0.8198757764, "recall_at_10": 0.9006211180, "mrr_at_10": 0.6916370896}
+    },
+    {
+      "index": "kuphaldt-e5-base-v2",
+      "model": "intfloat/e5-base-v2",
+      "dense": {"recall_at_5": 0.8012422360, "recall_at_10": 0.9068322981, "mrr_at_10": 0.6329266489},
+      "reranked": {"recall_at_5": 0.8260869565, "recall_at_10": 0.8881987578, "mrr_at_10": 0.7084048112}
+    },
+    {
+      "index": "kuphaldt-electrical-embeddinggemma-ir",
+      "model": "disham993/electrical-embeddinggemma-ir_finetune_16bit",
+      "dense": {"recall_at_5": 0.9192546584, "recall_at_10": 0.9503105590, "mrr_at_10": 0.7378339742},
+      "reranked": {"recall_at_5": 0.8447204969, "recall_at_10": 0.9006211180, "mrr_at_10": 0.6945282461}
+    },
+    {
+      "index": "kuphaldt-jina-v5-nano-retrieval",
+      "model": "jinaai/jina-embeddings-v5-text-nano-retrieval",
+      "dense": {"recall_at_5": 0.8695652174, "recall_at_10": 0.9130434783, "mrr_at_10": 0.7009563246},
+      "reranked": {"recall_at_5": 0.8571428571, "recall_at_10": 0.9254658385, "mrr_at_10": 0.7069580006}
+    }
+  ],
+  "blocked_models": [
+    "Qwen/Qwen3-Embedding-0.6B",
+    "allenai/specter2_base"
+  ],
+  "notes": [
+    "Eight models completed on the full 161-question benchmark.",
+    "The remote Marimo server reset its connection after the eighth completed run, before Qwen3 and SPECTER2 could be run.",
+    "The background runner may report a nonzero exit after printing valid metrics because the Marimo SSE session rolled over. Printed per-model JSON metrics are the authoritative completed results."
+  ]
+}

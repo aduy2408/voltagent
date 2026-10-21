@@ -1,0 +1,30 @@
+{
+  "benchmark": "hybrid_and_alternative_reranker_ablation",
+  "questions": 161,
+  "device": "cuda",
+  "hybrid": {
+    "lexical": "BM25",
+    "alpha": 0.7,
+    "dense_candidates": 100,
+    "reranker_candidates": 30
+  },
+  "alternative_reranker": "mixedbread-ai/mxbai-rerank-large-v1",
+  "hybrid_results": [
+    {"model":"Snowflake/snowflake-arctic-embed-l-v2.0","dense":{"recall_at_10":0.9440993788819876,"mrr_at_10":0.7426279207335108},"bm25":{"recall_at_10":0.782608695652174,"mrr_at_10":0.5752661934338952},"hybrid":{"recall_at_10":0.9254658385093167,"mrr_at_10":0.7430888297347925}},
+    {"model":"BAAI/bge-base-en-v1.5","dense":{"recall_at_10":0.906832298136646,"mrr_at_10":0.675830622103914},"bm25":{"recall_at_10":0.782608695652174,"mrr_at_10":0.5752661934338952},"hybrid":{"recall_at_10":0.9316770186335404,"mrr_at_10":0.7049985211475895}},
+    {"model":"BAAI/bge-large-en-v1.5","dense":{"recall_at_10":0.906832298136646,"mrr_at_10":0.6705018239179728},"bm25":{"recall_at_10":0.782608695652174,"mrr_at_10":0.5752661934338952},"hybrid":{"recall_at_10":0.9006211180124224,"mrr_at_10":0.7092378980577739}},
+    {"model":"BAAI/bge-m3","dense":{"recall_at_10":0.8881987577639752,"mrr_at_10":0.7024548950014788},"bm25":{"recall_at_10":0.782608695652174,"mrr_at_10":0.5752661934338952},"hybrid":{"recall_at_10":0.8881987577639752,"mrr_at_10":0.7194173321502513}},
+    {"model":"BAAI/bge-small-en-v1.5","dense":{"recall_at_10":0.9192546583850931,"mrr_at_10":0.6553559104801342},"bm25":{"recall_at_10":0.782608695652174,"mrr_at_10":0.5752661934338952},"hybrid":{"recall_at_10":0.906832298136646,"mrr_at_10":0.7088460021689835}},
+    {"model":"intfloat/e5-base-v2","dense":{"recall_at_10":0.906832298136646,"mrr_at_10":0.6329266489204377},"bm25":{"recall_at_10":0.782608695652174,"mrr_at_10":0.5752661934338952},"hybrid":{"recall_at_10":0.8944099378881988,"mrr_at_10":0.6688800157744255}},
+    {"model":"disham993/electrical-embeddinggemma-ir_finetune_16bit","dense":{"recall_at_10":0.9503105590062112,"mrr_at_10":0.7378339741693777},"bm25":{"recall_at_10":0.782608695652174,"mrr_at_10":0.5752661934338952},"hybrid":{"recall_at_10":0.9316770186335404,"mrr_at_10":0.7333801636596666}},
+    {"model":"jinaai/jina-embeddings-v5-text-nano-retrieval","dense":{"recall_at_10":0.9130434782608695,"mrr_at_10":0.7009563245588089},"bm25":{"recall_at_10":0.782608695652174,"mrr_at_10":0.5752661934338952},"hybrid":{"recall_at_10":0.9503105590062112,"mrr_at_10":0.722167997633836}},
+    {"model":"Qwen/Qwen3-Embedding-0.6B","dense":{"recall_at_10":0.9503105590062112,"mrr_at_10":0.7167677215813861},"bm25":{"recall_at_10":0.782608695652174,"mrr_at_10":0.5752661934338952},"hybrid":{"recall_at_10":0.9316770186335404,"mrr_at_10":0.7405698511288573}},
+    {"model":"allenai/specter2_base","dense":{"recall_at_10":0.3105590062111801,"mrr_at_10":0.15930198166223009},"bm25":{"recall_at_10":0.782608695652174,"mrr_at_10":0.5752661934338952},"hybrid":{"recall_at_10":0.4472049689440994,"mrr_at_10":0.24213004042196598}}
+  ],
+  "mxbai_results": [
+    {"model":"Snowflake/snowflake-arctic-embed-l-v2.0","dense_top30":{"recall_at_10":0.9440993788819876,"mrr_at_10":0.7426279207335108},"mxbai_dense_top30":{"recall_at_10":0.9316770186335404,"mrr_at_10":0.692233560090703},"mxbai_hybrid_top30":{"recall_at_10":0.9192546583850931,"mrr_at_10":0.6875529922113773}},
+    {"model":"disham993/electrical-embeddinggemma-ir_finetune_16bit","dense_top30":{"recall_at_10":0.9503105590062112,"mrr_at_10":0.7378339741693777},"mxbai_dense_top30":{"recall_at_10":0.9440993788819876,"mrr_at_10":0.6927067928620724},"mxbai_hybrid_top30":{"recall_at_10":0.9440993788819876,"mrr_at_10":0.6929310854776695}},
+    {"model":"Qwen/Qwen3-Embedding-0.6B","dense_top30":{"recall_at_10":0.9503105590062112,"mrr_at_10":0.7167677215813861},"mxbai_dense_top30":{"recall_at_10":0.9440993788819876,"mrr_at_10":0.6999975352459825},"mxbai_hybrid_top30":{"recall_at_10":0.9316770186335404,"mrr_at_10":0.6890663511781524}}
+  ],
+  "notes": ["Jina reranker was not loaded because its repository requires trust_remote_code=True; no untrusted custom code was enabled."]
+}

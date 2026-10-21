@@ -1,0 +1,21 @@
+{
+  "benchmark": "remote_dense_and_rerank",
+  "questions": 161,
+  "device": "cuda",
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "dense_search": "exact inner-product search with torch on CUDA; faiss-cpu used only to read IndexFlatIP files",
+  "reranker": "BAAI/bge-reranker-v2-m3",
+  "reranker_candidate_k": 30,
+  "results": [
+    {"index":"kuphaldt-arctic-embed-l-v2","model":"Snowflake/snowflake-arctic-embed-l-v2.0","dense":{"queries":161,"recall_at_5":0.8633540372670807,"recall_at_10":0.9440993788819876,"mrr_at_10":0.7426279207335108},"reranked":{"queries":161,"recall_at_5":0.8385093167701864,"recall_at_10":0.9006211180124224,"mrr_at_10":0.7084097407078775},"seconds":66.65027403831482},
+    {"index":"kuphaldt-bge-base-en-v1.5","model":"BAAI/bge-base-en-v1.5","dense":{"queries":161,"recall_at_5":0.8322981366459627,"recall_at_10":0.906832298136646,"mrr_at_10":0.675830622103914},"reranked":{"queries":161,"recall_at_5":0.8322981366459627,"recall_at_10":0.9130434782608695,"mrr_at_10":0.7072389825495415},"seconds":60.68562579154968},
+    {"index":"kuphaldt-bge-large-en-v1.5","model":"BAAI/bge-large-en-v1.5","dense":{"queries":161,"recall_at_5":0.8260869565217391,"recall_at_10":0.906832298136646,"mrr_at_10":0.6705018239179728},"reranked":{"queries":161,"recall_at_5":0.8322981366459627,"recall_at_10":0.9006211180124224,"mrr_at_10":0.692413487133984},"seconds":61.68085694313049},
+    {"index":"kuphaldt-bge-m3","model":"BAAI/bge-m3","dense":{"queries":161,"recall_at_5":0.84472049689441,"recall_at_10":0.8881987577639752,"mrr_at_10":0.7024548950014788},"reranked":{"queries":161,"recall_at_5":0.8260869565217391,"recall_at_10":0.9006211180124224,"mrr_at_10":0.6899364093463474},"seconds":72.53970456123352},
+    {"index":"kuphaldt-bge-small-en-v1.5","model":"BAAI/bge-small-en-v1.5","dense":{"queries":161,"recall_at_5":0.8509316770186336,"recall_at_10":0.9192546583850931,"mrr_at_10":0.6553559104801342},"reranked":{"queries":161,"recall_at_5":0.8198757763975155,"recall_at_10":0.9006211180124224,"mrr_at_10":0.6916370896184562},"seconds":59.411863803863525},
+    {"index":"kuphaldt-e5-base-v2","model":"intfloat/e5-base-v2","dense":{"queries":161,"recall_at_5":0.8012422360248447,"recall_at_10":0.906832298136646,"mrr_at_10":0.6329266489204377},"reranked":{"queries":161,"recall_at_5":0.8260869565217391,"recall_at_10":0.8881987577639752,"mrr_at_10":0.7084048111998422},"seconds":56.79079079627991},
+    {"index":"kuphaldt-electrical-embeddinggemma-ir","model":"disham993/electrical-embeddinggemma-ir_finetune_16bit","dense":{"queries":161,"recall_at_5":0.9192546583850931,"recall_at_10":0.9503105590062112,"mrr_at_10":0.7378339741693777},"reranked":{"queries":161,"recall_at_5":0.84472049689441,"recall_at_10":0.9006211180124224,"mrr_at_10":0.6945282460810411},"seconds":62.75853729248047},
+    {"index":"kuphaldt-jina-v5-nano-retrieval","model":"jinaai/jina-embeddings-v5-text-nano-retrieval","dense":{"queries":161,"recall_at_5":0.8695652173913043,"recall_at_10":0.9130434782608695,"mrr_at_10":0.7009563245588089},"reranked":{"queries":161,"recall_at_5":0.8571428571428571,"recall_at_10":0.9254658385093167,"mrr_at_10":0.706958000591541},"seconds":59.236082315444946},
+    {"index":"kuphaldt-qwen3-embedding-0.6b","model":"Qwen/Qwen3-Embedding-0.6B","dense":{"queries":161,"recall_at_5":0.8819875776397516,"recall_at_10":0.9503105590062112,"mrr_at_10":0.7167677215813861},"reranked":{"queries":161,"recall_at_5":0.84472049689441,"recall_at_10":0.9130434782608695,"mrr_at_10":0.6986912156166813},"seconds":62.70958185195923},
+    {"index":"kuphaldt-specter2-base","model":"allenai/specter2_base","dense":{"queries":161,"recall_at_5":0.22981366459627328,"recall_at_10":0.3105590062111801,"mrr_at_10":0.15930198166223009},"reranked":{"queries":161,"recall_at_5":0.36024844720496896,"recall_at_10":0.40372670807453415,"mrr_at_10":0.29661342797988766},"seconds":20.639153718948364}
+  ]
+}

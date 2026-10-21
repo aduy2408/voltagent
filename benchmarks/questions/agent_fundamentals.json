@@ -1,0 +1,227 @@
+[
+  {
+    "question": "Why does an open circuit stop current even when a voltage source is still connected?",
+    "reference_answer": "An open circuit has a broken or intentionally interrupted conductive path, so charge cannot complete a path through the source and load. The source voltage may still be present across the open point, but the circuit current is essentially zero.",
+    "relevant_source_sections": ["Direct Current|1|Electric circuits", "Direct Current|1|Voltage and current in a practical circuit"],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "conceptual_dc",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A resistor gets hotter after I increase the supply voltage. What electrical quantity explains that?",
+    "reference_answer": "The resistor dissipates electrical power, and for a fixed resistance power increases with the square of voltage, P = V²/R. The increased power becomes heat, so the component temperature rises if the heat is not removed.",
+    "relevant_source_sections": ["Direct Current|2|Power in electric circuits", "Direct Current|2|Calculating electric power"],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "component_behavior",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "What does it mean when a component has nonlinear resistance?",
+    "reference_answer": "A nonlinear component does not maintain a constant voltage-to-current ratio. Its effective resistance changes with operating point, so doubling the applied voltage does not necessarily double the current.",
+    "relevant_source_sections": ["Direct Current|2|Nonlinear conduction", "Experiments|2|Nonlinear resistance"],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "component_behavior",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "One branch of my resistor network is drawing too much current. How does a current divider help me reason about it?",
+    "reference_answer": "In parallel branches, the source voltage is common to each branch and branch current is set by that branch's resistance. A lower-resistance branch takes a larger share of the total current, which is the basis of current-divider analysis.",
+    "relevant_source_sections": ["Direct Current|6|Current divider circuits", "Direct Current|5|Simple parallel circuits"],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "troubleshooting_dc",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "How can an open resistor and a shorted resistor look different when troubleshooting a circuit?",
+    "reference_answer": "An open resistor interrupts its branch, so the branch current is near zero and the open component may have nearly the source voltage across it. A shorted resistor has very little voltage across it and can force excessive current through the branch or other components.",
+    "relevant_source_sections": ["Direct Current|5|Component failure analysis", "Direct Current|5|Simple series circuits", "Direct Current|5|Simple parallel circuits"],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "troubleshooting_dc",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "Why can connecting a voltmeter change the voltage I am trying to measure?",
+    "reference_answer": "A real voltmeter has finite input resistance. When connected across a circuit element, it forms a parallel load and can alter the circuit voltage, especially when the circuit's own resistance is high compared with the meter resistance.",
+    "relevant_source_sections": ["Direct Current|8|Voltmeter design", "Direct Current|8|Voltmeter impact on measured circuit"],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "measurement",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "I put the meter in current mode and the circuit voltage collapsed. What likely went wrong?",
+    "reference_answer": "An ammeter is designed to have very low resistance and must be inserted in series. Placing it directly across a source or load can create an unintended near-short circuit, causing the voltage to collapse and potentially damaging the meter or circuit.",
+    "relevant_source_sections": ["Direct Current|8|Ammeter design", "Direct Current|8|Ammeter impact on measured circuit", "Direct Current|3|Safe meter usage"],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "measurement_troubleshooting",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "When is a four-wire resistance measurement better than simply placing an ohmmeter across the part?",
+    "reference_answer": "A Kelvin or four-wire measurement is useful when lead and contact resistance would be significant compared with the unknown resistance. Separate force and sense connections reduce the error caused by voltage drops in the current-carrying leads.",
+    "relevant_source_sections": ["Direct Current|8|Kelvin (4-wire) resistance measurement", "Experiments|3|4-wire resistance measurement"],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "precision_measurement",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "How do I read the value and tolerance of a four-band resistor?",
+    "reference_answer": "The first two bands give the significant digits, the third band gives the multiplier, and the fourth band gives the tolerance. The bands should be interpreted using the resistor color-code table and the stated band order.",
+    "relevant_source_sections": ["Electrical Reference|2|Resistor Color Codes"],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "component_identification",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "A battery label lists ampere-hours. What does that rating tell me, and what does it not guarantee?",
+    "reference_answer": "An ampere-hour rating represents a specified amount of charge delivery under stated test conditions, roughly current multiplied by time. It does not by itself guarantee the same runtime at every load, because discharge rate and practical battery behavior affect available capacity.",
+    "relevant_source_sections": ["Direct Current|11|Battery ratings", "Direct Current|11|Practical considerations"],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "component_selection",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "Why might a fuse open even though the equipment seemed to work normally before?",
+    "reference_answer": "A fuse opens when current exceeds its protective operating condition for long enough, which can result from a short circuit, overload, startup or inrush current, or another fault. The fuse should be treated as evidence of a current problem rather than simply replaced with a larger one.",
+    "relevant_source_sections": ["Direct Current|12|Fuses", "Direct Current|12|Conductor ampacity", "Direct Current|3|Safe circuit design"],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "troubleshooting_protection",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "What changes when two capacitors are connected in parallel instead of in series?",
+    "reference_answer": "Parallel capacitors have a total capacitance equal to the sum of their capacitances. Series capacitors combine to a smaller equivalent capacitance, with the reciprocal values adding, and voltage sharing depends on the individual capacitances.",
+    "relevant_source_sections": ["Direct Current|13|Series and parallel capacitors", "Electrical Reference|1|Series and Parallel Capacitances"],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "component_network",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "How does a changing magnetic field produce a voltage in a nearby conductor?",
+    "reference_answer": "Electromagnetic induction occurs when changing magnetic flux through a conductor or coil induces an electromotive force. A larger or faster-changing flux linkage generally produces a larger induced voltage, with polarity opposing the change according to the induction rule.",
+    "relevant_source_sections": ["Direct Current|14|Electromagnetic induction", "Experiments|2|Electromagnetic induction"],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "electromagnetism",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "What does AC phase tell me that an RMS voltage value alone does not?",
+    "reference_answer": "Phase describes the relative timing or angular displacement between AC waveforms, such as voltage and current. RMS magnitude describes size or heating-equivalent level, but it does not specify whether one waveform leads or lags another.",
+    "relevant_source_sections": ["Alternating Current|1|AC phase", "Alternating Current|1|Measurements of AC magnitude"],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "ac_fundamentals",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "In an ideal AC resistor circuit, what happens to the phase relationship between voltage and current?",
+    "reference_answer": "For an ideal resistor, voltage and current are in phase. Their zero crossings and peaks occur together, and the opposition to AC is resistive rather than frequency-dependent reactance.",
+    "relevant_source_sections": ["Alternating Current|3|AC resistor circuits", "Electrical Reference|1|Ohm's Law for AC"],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "ac_fundamentals",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "Why does a capacitor pass more AC current as frequency increases?",
+    "reference_answer": "Capacitive reactance decreases as frequency increases, according to the inverse relationship between reactance, frequency, and capacitance. With less opposition at the same applied AC voltage, the current increases.",
+    "relevant_source_sections": ["Alternating Current|4|AC capacitor circuits", "Electrical Reference|1|Capacitive reactance"],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "ac_component_behavior",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "What is the practical purpose of using a transformer for electrical isolation?",
+    "reference_answer": "A transformer can transfer AC energy magnetically while keeping the primary and secondary conductors electrically separate. This isolation can reduce direct conductive shock paths and allow a circuit to reference the secondary independently, subject to proper safety practice.",
+    "relevant_source_sections": ["Alternating Current|9|Mutual inductance and basic operation", "Alternating Current|9|Electrical isolation"],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "component_application",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "A three-phase motor spins the wrong way after rewiring. What should I check first?",
+    "reference_answer": "Check the phase sequence or phase rotation. Interchanging two of the three supply conductors reverses the phase sequence and commonly reverses the direction of a three-phase motor.",
+    "relevant_source_sections": ["Alternating Current|10|Phase rotation", "Alternating Current|10|Three-phase power systems", "Alternating Current|13|Motor starting and speed control"],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "troubleshooting_ac",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "Can someone explain the difference between real, reactive, and apparent power without making it too abstract?",
+    "reference_answer": "Real power is the average power converted to useful work or heat. Reactive power represents energy exchanged back and forth by inductors and capacitors. Apparent power combines the voltage and current magnitudes, and the relationship among the three is reflected by power factor.",
+    "relevant_source_sections": ["Alternating Current|11|Power in resistive and reactive AC circuits", "Alternating Current|11|True, Reactive, and Apparent power"],
+    "difficulty": "medium",
+    "intent_clarity": "vague",
+    "scenario_type": "ac_power",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "My AC meter gives a number, but I need to know whether the waveform is distorted and what its frequency is. What kind of measurement is missing?",
+    "reference_answer": "A magnitude-only reading is insufficient for waveform shape and frequency. Frequency and phase measurement, along with waveform observation or analysis, is needed to characterize timing and distortion rather than just voltage or current magnitude.",
+    "relevant_source_sections": ["Alternating Current|12|Frequency and phase measurement", "Alternating Current|1|AC waveforms", "Experiments|4|Waveform analysis"],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "measurement_diagnostics",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "What is a low-pass filter actually doing to a changing signal?",
+    "reference_answer": "A low-pass filter passes lower-frequency components more readily and attenuates higher-frequency components. Its transition behavior depends on the circuit elements and their frequency-dependent impedance.",
+    "relevant_source_sections": ["Alternating Current|8|What is a filter?", "Alternating Current|8|Low-pass filters"],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "signal_conditioning",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "The reading is weird and the circuit is dead. What should I measure first?",
+    "reference_answer": "The question is underspecified, but a safe troubleshooting sequence starts by identifying the reference and checking whether the source voltage is present, then verifying the circuit path and component voltages or currents with the correct meter function and connection. The exact checks depend on whether the fault is an open, short, missing supply, or measurement setup error.",
+    "relevant_source_sections": ["Direct Current|3|Safe meter usage", "Direct Current|5|Component failure analysis", "Direct Current|8|Multimeters", "Direct Current|1|Voltage and current in a practical circuit"],
+    "difficulty": "hard",
+    "intent_clarity": "ambiguous",
+    "scenario_type": "underspecified_troubleshooting",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "Why is my resistor divider output not the value I calculated when I connect a load?",
+    "reference_answer": "The load is connected in parallel with the divider resistor that supplies the output, changing the effective resistance and therefore the division ratio. A loaded divider must include the load resistance in the equivalent calculation rather than assuming an unloaded output.",
+    "relevant_source_sections": ["Direct Current|6|Voltage divider circuits", "Direct Current|5|Simple parallel circuits", "Direct Current|8|Voltmeter impact on measured circuit"],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "troubleshooting_dc",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "I have a coil that behaves fine at low frequency but becomes much harder to drive at high frequency. Why?",
+    "reference_answer": "An inductor's reactance increases with frequency and inductance, so the coil presents greater opposition to AC current as frequency rises. Real inductors can also show parasitic effects and losses that make their behavior depart from an ideal inductor.",
+    "relevant_source_sections": ["Alternating Current|3|AC inductor circuits", "Electrical Reference|1|Inductive reactance", "Alternating Current|3|Inductor quirks"],
+    "difficulty": "hard",
+    "intent_clarity": "vague",
+    "scenario_type": "ac_component_troubleshooting",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "A diode in my rectifier seems to conduct on the wrong half-cycle. How should I think about the fault?",
+    "reference_answer": "A rectifier's diode orientation determines which half-cycle is conducted and the polarity of the output. If conduction occurs on the wrong half-cycle, check diode orientation, wiring, and whether the observed waveform is being measured with the intended reference and polarity.",
+    "relevant_source_sections": ["Experiments|5|Half-wave rectifier", "Experiments|5|Full-wave bridge rectifier", "Direct Current|8|Multimeters"],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "component_troubleshooting",
+    "expected_retrieval_hops": "3+"
+  }
+]

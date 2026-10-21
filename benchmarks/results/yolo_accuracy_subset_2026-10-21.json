@@ -1,0 +1,143 @@
+{
+  "dataset": "CGHD subset",
+  "images": 50,
+  "drafters": [
+    "drafter_1",
+    "drafter_2",
+    "drafter_3",
+    "drafter_4",
+    "drafter_5"
+  ],
+  "imgsz": 640,
+  "confidence_for_ap": 0.001,
+  "agreement_confidence": 0.25,
+  "iou_threshold": 0.5,
+  "models": {
+    "pytorch": "data/models/circuit-component-detector/yolo26m_obb_16class_aug.pt",
+    "onnx": "data/models/circuit-component-detector/yolo26m_obb_16class_aug.onnx",
+    "tensorrt": "data/models/circuit-component-detector/yolo26m_obb_16class_aug.engine"
+  },
+  "backends": {
+    "pytorch": {
+      "images": 50,
+      "detections": 5478,
+      "mean_detections_per_image": 109.56,
+      "map50_subset": 0.5999794141829324,
+      "per_class_ap50": {
+        "resistor": 0.188161,
+        "terminal": 0.980198,
+        "crossover": 1.0,
+        "capacitor": 0.0,
+        "diode": 0.954275,
+        "transistor": 0.0,
+        "switch": 1.0,
+        "inductor": 0.0,
+        "voltage_source": 0.0,
+        "text": 0.955786,
+        "junction": 0.934759,
+        "gnd": 0.995875,
+        "integrated_circuit": 1.0,
+        "other": 0.390658
+      },
+      "elapsed_seconds": 7.637,
+      "metrics_at_agreement_conf": {
+        "tp": 1189,
+        "fp": 249,
+        "fn": 326,
+        "precision": 0.8268428372739917,
+        "recall": 0.7848184818481848,
+        "f1": 0.805282763291568
+      }
+    },
+    "onnx": {
+      "images": 50,
+      "detections": 4450,
+      "mean_detections_per_image": 89.0,
+      "map50_subset": 0.5880172990208195,
+      "per_class_ap50": {
+        "resistor": 0.18911,
+        "terminal": 0.980198,
+        "crossover": 1.0,
+        "capacitor": 0.0,
+        "diode": 0.90946,
+        "transistor": 0.0,
+        "switch": 1.0,
+        "inductor": 0.0,
+        "voltage_source": 0.0,
+        "text": 0.963009,
+        "junction": 0.95478,
+        "gnd": 0.996287,
+        "integrated_circuit": 1.0,
+        "other": 0.239399
+      },
+      "elapsed_seconds": 4.957,
+      "metrics_at_agreement_conf": {
+        "tp": 1203,
+        "fp": 253,
+        "fn": 312,
+        "precision": 0.8262362637362637,
+        "recall": 0.7940594059405941,
+        "f1": 0.8098283406260519
+      }
+    },
+    "tensorrt": {
+      "images": 50,
+      "detections": 4453,
+      "mean_detections_per_image": 89.06,
+      "map50_subset": 0.587694640155509,
+      "per_class_ap50": {
+        "resistor": 0.189336,
+        "terminal": 0.980198,
+        "crossover": 1.0,
+        "capacitor": 0.0,
+        "diode": 0.909666,
+        "transistor": 0.0,
+        "switch": 1.0,
+        "inductor": 0.0,
+        "voltage_source": 0.0,
+        "text": 0.962952,
+        "junction": 0.954717,
+        "gnd": 0.997318,
+        "integrated_circuit": 1.0,
+        "other": 0.233537
+      },
+      "elapsed_seconds": 3.878,
+      "metrics_at_agreement_conf": {
+        "tp": 1203,
+        "fp": 253,
+        "fn": 312,
+        "precision": 0.8262362637362637,
+        "recall": 0.7940594059405941,
+        "f1": 0.8098283406260519
+      }
+    }
+  },
+  "agreement": {
+    "pytorch_vs_onnx": {
+      "matched_detections_iou50_class_aware": 1428,
+      "left_detections": 1438,
+      "right_detections": 1456,
+      "matched_over_left": 0.9930458970792768,
+      "matched_over_right": 0.9807692307692307
+    },
+    "pytorch_vs_tensorrt": {
+      "matched_detections_iou50_class_aware": 1428,
+      "left_detections": 1438,
+      "right_detections": 1456,
+      "matched_over_left": 0.9930458970792768,
+      "matched_over_right": 0.9807692307692307
+    },
+    "onnx_vs_tensorrt": {
+      "matched_detections_iou50_class_aware": 1456,
+      "left_detections": 1456,
+      "right_detections": 1456,
+      "matched_over_left": 1.0,
+      "matched_over_right": 1.0
+    }
+  },
+  "limitations": [
+    "This is a 50-image subset, not the model card's full 468-image validation split.",
+    "Ground-truth Pascal VOC boxes are compared as axis-aligned boxes to YOLO OBB xyxy boxes.",
+    "Class mapping merges the 61 CGHD labels into the model's 16 classes."
+  ]
+}

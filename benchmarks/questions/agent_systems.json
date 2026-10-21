@@ -1,0 +1,227 @@
+[
+  {
+    "question": "Why can a battery's amp-hour rating not by itself tell me how much power it can deliver to a load?",
+    "reference_answer": "An amp-hour rating describes charge capacity over a stated discharge condition, not the battery's terminal voltage, internal resistance, or allowable discharge rate. Power depends on both voltage and current, so battery ratings and the operating load must be considered together.",
+    "relevant_source_sections": ["Direct Current|11|Battery ratings", "Direct Current|11|Battery construction"],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "battery-rating-interpretation",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "Two batteries are wired in parallel, but one is reversed. What should I check before energizing the circuit, and why is this more serious than simply getting the wrong total voltage?",
+    "reference_answer": "Check polarity, battery condition, and the intended connection before closing the circuit. A reversed parallel battery can drive a large circulating current between sources, limited mainly by internal and wiring resistance, causing heating, damage, or an unsafe condition rather than merely changing the load voltage.",
+    "relevant_source_sections": ["Direct Current|11|Battery construction", "Direct Current|3|Common sources of hazard", "Direct Current|3|Safe circuit design"],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "safety-minded-battery-diagnosis",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "My homemade potato battery shows voltage on a meter but cannot light the small lamp. Is it broken?",
+    "reference_answer": "Not necessarily. The potato battery experiment can produce a measurable open-circuit voltage, but its available current may be too small for the lamp. Check the load current requirement, electrode connections, and whether cells are combined in series or another suitable arrangement.",
+    "relevant_source_sections": ["Experiments|3|Potato battery", "Direct Current|11|Battery ratings", "Direct Current|3|Safe meter usage"],
+    "difficulty": "medium",
+    "intent_clarity": "vague",
+    "scenario_type": "context-poor-experiment-troubleshooting",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "What does Faraday's law help predict when a changing current in one coil produces a voltage in a nearby coil?",
+    "reference_answer": "A changing magnetic field or changing magnetic flux linking the nearby coil induces an electromotive force. The induced voltage depends on the rate of change of linked flux and its polarity opposes the change that produced it.",
+    "relevant_source_sections": ["Direct Current|14|Electromagnetic induction", "Experiments|2|Electromagnetic induction", "Alternating Current|9|Mutual inductance and basic operation"],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "magnetic-induction-concept",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "Why does an iron-core inductor or transformer get hot when its core experiences eddy currents, and what design idea reduces that loss?",
+    "reference_answer": "Eddy currents circulate within the conductive core in response to changing magnetic flux and dissipate energy as heat. Laminating the core or otherwise increasing the resistance of unwanted current paths reduces those circulating currents and the associated loss.",
+    "relevant_source_sections": ["Direct Current|15|Magnetic fields and inductance", "Alternating Current|9|Energy losses", "Alternating Current|9|Heat and Noise"],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "magnetic-loss-diagnosis",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "A transformer output is lower than expected only when a load is connected. Which transformer concepts should guide the diagnosis?",
+    "reference_answer": "Compare the no-load and loaded secondary voltage and consider voltage regulation, winding resistance, power capacity, and losses. An overloaded transformer or excessive winding drop can make the loaded voltage fall even when the unloaded ratio appears correct.",
+    "relevant_source_sections": ["Alternating Current|9|Voltage regulation", "Alternating Current|9|Power capacity", "Alternating Current|9|Energy losses"],
+    "difficulty": "hard",
+    "intent_clarity": "vague",
+    "scenario_type": "transformer-fault-isolation",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "Follow-up: if the transformer primary and secondary waveforms have the expected frequency but opposite polarity, what should I inspect before assuming the transformer is defective?",
+    "reference_answer": "Inspect winding phasing, lead markings, and the relative dot or polarity convention. A reversed winding connection can change the phase relationship without changing the frequency or necessarily indicating a failed transformer.",
+    "relevant_source_sections": ["Alternating Current|9|Phasing", "Alternating Current|9|Winding configurations"],
+    "difficulty": "medium",
+    "intent_clarity": "ambiguous",
+    "scenario_type": "conversational-transformer-follow-up",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "Why can a transformer draw a large current at switch-on even when its steady-state load is modest?",
+    "reference_answer": "The energizing event can create inrush current as the core flux and magnetization conditions settle. The size depends on switching phase, residual flux, and core behavior, so a brief high current does not automatically mean the steady load is excessive.",
+    "relevant_source_sections": ["Alternating Current|9|Inrush current", "Alternating Current|9|Core saturation"],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "power-on-diagnosis",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "What is the practical difference between a potential transformer and a current transformer in an AC measurement system?",
+    "reference_answer": "A potential transformer scales a high voltage to a safer, measurable voltage, while a current transformer produces a proportional secondary current for measuring a line current. Their connections and operating precautions differ, especially because a current-transformer secondary should not be treated like an open ordinary voltage source while energized.",
+    "relevant_source_sections": ["Alternating Current|9|Potential transformers", "Alternating Current|9|Current transformers", "Alternating Current|12|AC instrumentation transducers"],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "instrumentation-transformer-selection",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "In a three-phase system, why does phase rotation matter if the measured line-to-line voltage magnitudes are all normal?",
+    "reference_answer": "Phase rotation determines the order in which the phase voltages reach their corresponding positions and therefore the direction of the rotating magnetic field in a three-phase motor. Magnitudes can look normal while reversed phase order makes the motor rotate backward.",
+    "relevant_source_sections": ["Alternating Current|10|Phase rotation", "Alternating Current|10|Three-phase power systems", "Alternating Current|13|Tesla polyphase induction motors"],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "three-phase-motor-diagnosis",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "I have three equal loads and a source with a neutral. When is a wye connection useful, and how does it differ from delta for the same three-phase system?",
+    "reference_answer": "A wye connection joins one end of each phase load at a common neutral point and can provide a neutral reference and line-to-neutral loads. A delta connection joins the phases end-to-end without that central neutral, with different relationships between line and phase voltages and currents.",
+    "relevant_source_sections": ["Alternating Current|10|Three-phase Y and Delta configurations", "Alternating Current|10|Three-phase power systems"],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "three-phase-connection-comparison",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A three-phase panel has balanced fundamental currents but a hot neutral. What corpus concepts would you investigate before blaming the neutral conductor?",
+    "reference_answer": "Investigate harmonic currents, especially the behavior of triplen or zero-sequence components in polyphase systems, because some harmonic currents can add in the neutral rather than cancel as balanced fundamental currents do. Also verify the measurement method and actual load waveform.",
+    "relevant_source_sections": ["Alternating Current|10|Harmonics in polyphase power systems", "Alternating Current|10|Harmonic phase sequences", "Alternating Current|12|Power quality measurement"],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "multi-domain-power-quality-diagnosis",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "Why does adding a capacitor across an inductive AC load improve power factor without being the same thing as reducing the real load power?",
+    "reference_answer": "The capacitor supplies leading reactive current that offsets part of the lagging reactive current drawn by the inductive load, reducing apparent current and improving power factor. The real power consumed by the load is not automatically reduced by the correction.",
+    "relevant_source_sections": ["Alternating Current|11|Calculating power factor", "Alternating Current|11|Practical power factor correction", "Alternating Current|11|True, Reactive, and Apparent power"],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "AC-power-factor-correction",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "The meter says 120 V, but the resistor heats more than expected. What measurement question should I ask about the meter before concluding the circuit violates the power calculation?",
+    "reference_answer": "Ask whether the instrument reports true RMS for the waveform being measured. RMS is tied to equivalent heating effect, while some meters assume a sinusoid and can misreport nonsinusoidal voltage, leading to an incorrect estimate of resistor heating.",
+    "relevant_source_sections": ["Alternating Current|12|AC instrumentation transducers", "Alternating Current|1|Measurements of AC magnitude", "Alternating Current|11|Power in resistive and reactive AC circuits"],
+    "difficulty": "hard",
+    "intent_clarity": "vague",
+    "scenario_type": "instrumentation-and-power-diagnosis",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "What is an oscilloscope actually showing when I probe a circuit node, and why must I think about the probe reference before connecting it?",
+    "reference_answer": "An oscilloscope displays voltage versus time at the probe tip relative to its reference or ground connection. The reference connection is part of the circuit, so an inappropriate connection can short nodes together or create a shock hazard, especially in power circuits.",
+    "relevant_source_sections": ["Alternating Current|1|AC waveforms", "Experiments|4|PC Oscilloscope", "Direct Current|3|Safe meter usage", "Direct Current|3|Common sources of hazard"],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "safe-instrument-use",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "Can I clip my grounded oscilloscope lead to any point that looks like ground?",
+    "reference_answer": "No. Confirm what the instrument reference is connected to and whether the circuit node is safe for that reference. A grounded oscilloscope connection can create an unintended short or expose the operator to hazardous voltage, so use low-voltage isolated experiments or an appropriate differential measurement method.",
+    "relevant_source_sections": ["Experiments|4|PC Oscilloscope", "Direct Current|3|Safe meter usage", "Direct Current|3|Safe practices", "Direct Current|3|Shock current path"],
+    "difficulty": "medium",
+    "intent_clarity": "ambiguous",
+    "scenario_type": "safety-minded-follow-up",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "Why does SPICE require node zero, and what kind of simulation mistake can appear if a circuit has an otherwise floating reference?",
+    "reference_answer": "Node zero is SPICE's reference or ground node, so node voltages need a defined reference. Omitting it or leaving the simulated circuit without a valid reference can make the netlist invalid or produce undefined and misleading node-voltage results.",
+    "relevant_source_sections": ["Electrical Reference|7|Must have a node 0", "Electrical Reference|7|A good beginning", "Electrical Reference|7|Fundamentals of SPICE programming"],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "SPICE-netlist-basics",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "My SPICE netlist contains an ideal voltage source and an inductor in a loop, and the simulator complains. What modeling workaround does the corpus suggest, and what physical imperfection does it represent?",
+    "reference_answer": "Add a small series resistance or otherwise avoid an ideal source-inductor loop that SPICE cannot solve as written. The added resistance represents the nonzero resistance present in real wiring or windings and also removes the mathematically singular ideal loop.",
+    "relevant_source_sections": ["Electrical Reference|7|Avoid certain component loops", "Electrical Reference|7|INDUCTORS", "Electrical Reference|7|Transformer circuit"],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "SPICE-debugging-and-modeling",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "Follow-up to a SPICE AC result: why might the printed current phase look 180 degrees away from the phase I calculate by hand?",
+    "reference_answer": "SPICE's current sign convention can report current relative to the voltage-source reference direction, so the displayed phase may differ by 180 degrees from a hand calculation using the opposite current direction. Interpret the reference direction before treating the result as a circuit error.",
+    "relevant_source_sections": ["Alternating Current|3|AC inductor circuits", "Electrical Reference|7|AC phase shift demonstration", "Electrical Reference|7|Analysis options"],
+    "difficulty": "hard",
+    "intent_clarity": "ambiguous",
+    "scenario_type": "conversational-SPICE-follow-up",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "How would you use a SPICE model and a real measurement together to distinguish an incorrectly wired transformer from a transformer with excessive losses?",
+    "reference_answer": "First model the expected winding ratio, phasing, loading, and coupling, then compare no-load and loaded voltage and current measurements. A wiring or phasing error should show a topology or polarity mismatch, while excessive voltage drop, heat, or current beyond the ideal model points toward winding, core, or other losses.",
+    "relevant_source_sections": ["Electrical Reference|7|Transformer circuit", "Alternating Current|9|Phasing", "Alternating Current|9|Energy losses", "Alternating Current|9|Voltage regulation"],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "multi-domain-model-to-bench-diagnosis",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "A student says, 'It only sparks for an instant, so it must be safe.' How should the electrical-safety material correct that reasoning?",
+    "reference_answer": "A brief event can still deliver dangerous current, cause burns, ignite materials, damage equipment, or expose a person to a hazardous shock path. Safety depends on voltage, available current, energy, circuit conditions, and the person's path, not merely on how long the visible spark lasts.",
+    "relevant_source_sections": ["Direct Current|3|Physiological effects of electricity", "Direct Current|3|Common sources of hazard", "Direct Current|3|Shock current path", "Direct Current|3|Safe practices"],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "safety-misconception",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "What is the point of the transformer power-supply experiment if the circuit is powered from a small source rather than utility voltage?",
+    "reference_answer": "It demonstrates transformer action, winding relationships, and induced AC voltage in a controlled low-energy setting. Using a small source supports experimentation while reducing shock, fire, and equipment hazards compared with working directly from mains power.",
+    "relevant_source_sections": ["Experiments|4|Transformer -- power supply", "Experiments|4|Build a transformer", "Direct Current|3|Safe circuit design"],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "safe-experiment-design",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "In the induction-motor experiment, what physical chain connects the applied AC, the rotating magnetic field, and the observed rotor motion?",
+    "reference_answer": "The phase-shifted stator currents create a rotating magnetic field, which induces effects in the rotor and produces torque. The rotor follows the rotating field with the behavior expected of an induction motor rather than being driven by a direct mechanical connection.",
+    "relevant_source_sections": ["Experiments|4|Induction motor", "Alternating Current|10|Three-phase power systems", "Alternating Current|13|Tesla polyphase induction motors"],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "experiment-to-theory-connection",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "The current transformer reading is wrong, the three-phase motor is turning backward, and the protection trips on startup. Could these be separate faults, or is there a connected diagnostic path?",
+    "reference_answer": "They could be connected through phase identification, current-transformer wiring, phase rotation, and startup or inrush current. Verify the measurement transformer connections and polarity, confirm phase sequence, and distinguish a brief starting current from an abnormal sustained current before replacing components.",
+    "relevant_source_sections": ["Alternating Current|9|Current transformers", "Alternating Current|10|Phase rotation", "Alternating Current|9|Inrush current", "Alternating Current|13|Tesla polyphase induction motors", "Direct Current|3|Safe meter usage"],
+    "difficulty": "hard",
+    "intent_clarity": "vague",
+    "scenario_type": "multi-symptom-three-phase-diagnosis",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "Can you explain what is going on here? The waveform is ugly, the transformer hums, and the neutral gets warm.",
+    "reference_answer": "The symptoms suggest investigating nonsinusoidal loads, harmonics, transformer heating or noise, and harmonic phase behavior in the three-phase system. Confirm the waveform and RMS measurements with suitable instrumentation, then check whether harmonic currents are accumulating in the neutral and increasing transformer losses.",
+    "relevant_source_sections": ["Alternating Current|10|Harmonics in polyphase power systems", "Alternating Current|10|Harmonic phase sequences", "Alternating Current|9|Heat and Noise", "Alternating Current|12|Power quality measurement"],
+    "difficulty": "hard",
+    "intent_clarity": "vague",
+    "scenario_type": "context-poor-power-quality-investigation",
+    "expected_retrieval_hops": "3+"
+  }
+]

@@ -1,0 +1,1980 @@
+[
+  {
+    "question": "What is the difference between conventional current flow and electron flow?",
+    "reference_answer": "Conventional current is defined as flowing from positive to negative, while electron flow describes the movement of electrons from negative to positive.",
+    "relevant_source_sections": [
+      "Direct Current|1|Conventional versus electron flow"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "conceptual",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "How are voltage and current related in a basic electric circuit?",
+    "reference_answer": "Voltage provides the potential difference that drives charge, while current is the rate at which charge moves through the circuit.",
+    "relevant_source_sections": [
+      "Direct Current|1|Voltage and current"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "conceptual",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "What relationship does Ohm's Law describe?",
+    "reference_answer": "For a given resistance, current is proportional to voltage, expressed as voltage equals current multiplied by resistance.",
+    "relevant_source_sections": [
+      "Direct Current|2|How voltage, current, and resistance relate"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "conceptual",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "What is characteristic of a simple series circuit?",
+    "reference_answer": "The same current flows through each series component, while the source voltage is divided among the components.",
+    "relevant_source_sections": [
+      "Direct Current|5|Simple series circuits"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "conceptual",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "How does a voltage divider determine an output voltage?",
+    "reference_answer": "A series resistor network divides the source voltage according to the resistor values, with the output measured across a selected resistor or group.",
+    "relevant_source_sections": [
+      "Direct Current|6|Voltage divider circuits"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "conceptual",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "What does Kirchhoff's Current Law state?",
+    "reference_answer": "The algebraic sum of currents at a node is zero, so current entering a node equals current leaving it.",
+    "relevant_source_sections": [
+      "Direct Current|6|Kirchhoff's Current Law (KCL)"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "conceptual",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "What is alternating current?",
+    "reference_answer": "Alternating current periodically changes direction or polarity, unlike direct current which maintains a constant direction or polarity.",
+    "relevant_source_sections": [
+      "Alternating Current|1|What is alternating current (AC)?"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "conceptual",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "What are AC waveforms used to describe?",
+    "reference_answer": "AC waveforms describe how an alternating voltage or current varies with time, including its shape, amplitude, period, and frequency.",
+    "relevant_source_sections": [
+      "Alternating Current|1|AC waveforms"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "conceptual",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "How is AC magnitude commonly measured?",
+    "reference_answer": "AC magnitude can be described by peak, peak-to-peak, average, or RMS values, with RMS representing equivalent heating effect in a resistor.",
+    "relevant_source_sections": [
+      "Alternating Current|1|Measurements of AC magnitude"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "conceptual",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "What is the role of inductive and capacitive reactance in an RLC circuit?",
+    "reference_answer": "Inductive and capacitive reactance contribute frequency-dependent opposition and phase shift, while their combination with resistance determines total impedance.",
+    "relevant_source_sections": [
+      "Alternating Current|5|Series R, L, and C"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "conceptual",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "What happens in a simple series resonant circuit?",
+    "reference_answer": "At resonance, inductive and capacitive reactances cancel, producing minimum series impedance and maximum current for a given applied voltage.",
+    "relevant_source_sections": [
+      "Alternating Current|6|Simple series resonance"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "conceptual",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "How is power factor calculated in an AC circuit?",
+    "reference_answer": "Power factor is real power divided by apparent power and, for a sinusoidal circuit, is related to the cosine of the phase angle.",
+    "relevant_source_sections": [
+      "Alternating Current|11|Calculating power factor"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "conceptual",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "What is the difference between active and passive electronic devices?",
+    "reference_answer": "Active devices can control or supply energy and provide gain, while passive devices do not provide power gain and primarily store, dissipate, or transfer energy.",
+    "relevant_source_sections": [
+      "Semiconductors|1|Active versus passive devices"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "conceptual",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "What does amplifier gain measure?",
+    "reference_answer": "Amplifier gain measures the ratio of an output signal quantity to the corresponding input signal quantity, such as voltage, current, or power.",
+    "relevant_source_sections": [
+      "Semiconductors|1|Amplifier gain"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "conceptual",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "What are decibels used to express in electronics?",
+    "reference_answer": "Decibels express logarithmic ratios of power, voltage, current, or signal levels, making large ranges of gain and attenuation easier to represent.",
+    "relevant_source_sections": [
+      "Semiconductors|1|Decibels"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "conceptual",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "What is a P-N junction?",
+    "reference_answer": "A P-N junction is the boundary between p-type and n-type semiconductor material, where charge carriers and a depletion region establish diode-like behavior.",
+    "relevant_source_sections": [
+      "Semiconductors|2|The P-N junction"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "conceptual",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "What is the purpose of a Zener diode?",
+    "reference_answer": "A Zener diode is designed to operate in reverse breakdown and can provide voltage regulation or a reference when current is controlled.",
+    "relevant_source_sections": [
+      "Semiconductors|3|Zener diodes"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "conceptual",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "What is a MOSFET?",
+    "reference_answer": "A MOSFET is an insulated-gate field-effect transistor whose gate voltage controls conduction through a semiconductor channel.",
+    "relevant_source_sections": [
+      "Semiconductors|2|Insulated-gate field-effect transistors (MOSFET)"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "conceptual",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "How does binary numeration differ from decimal numeration?",
+    "reference_answer": "Binary uses base two with digits zero and one, while decimal uses base ten with digits zero through nine.",
+    "relevant_source_sections": [
+      "Digital Circuits|1|Decimal versus binary numeration"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "conceptual",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "How does binary addition work?",
+    "reference_answer": "Binary addition follows base-two column rules and carries one to the next position whenever a column sum reaches two or more.",
+    "relevant_source_sections": [
+      "Digital Circuits|2|Binary addition"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "conceptual",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "What logical operation does an AND gate perform?",
+    "reference_answer": "An AND gate produces a true or high output only when all of its inputs are true or high.",
+    "relevant_source_sections": [
+      "Digital Circuits|3|The AND gate"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "conceptual",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "What are DeMorgan's theorems used for?",
+    "reference_answer": "DeMorgan's theorems transform complemented AND and OR expressions into equivalent forms by exchanging the operation and complementing each term.",
+    "relevant_source_sections": [
+      "Digital Circuits|7|DeMorgan's Theorems"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "conceptual",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "What is a Karnaugh map used for?",
+    "reference_answer": "A Karnaugh map provides a visual method for simplifying Boolean expressions and combinational logic by grouping adjacent truth-table cells.",
+    "relevant_source_sections": [
+      "Digital Circuits|8|Logic simplification with Karnaugh maps"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "conceptual",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "What is the difference between a half-adder and a full-adder?",
+    "reference_answer": "A half-adder adds two bits, while a full-adder also accepts a carry input from a lower-order position.",
+    "relevant_source_sections": [
+      "Digital Circuits|9|A Full-Adder"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "conceptual",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "What does Kirchhoff's Voltage Law state?",
+    "reference_answer": "The algebraic sum of voltages around any closed circuit loop is zero.",
+    "relevant_source_sections": [
+      "Electrical Reference|1|Kirchhoff's Laws"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "conceptual",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "What equation is used to size a capacitor?",
+    "reference_answer": "Capacitor sizing relates capacitance to charge and voltage, with the required value determined by the circuit's charge or timing requirement.",
+    "relevant_source_sections": [
+      "Electrical Reference|1|Capacitor sizing equation"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "conceptual",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "What is the time constant of a series RC circuit?",
+    "reference_answer": "The time constant of a series RC circuit is the product of resistance and capacitance, tau equals R times C.",
+    "relevant_source_sections": [
+      "Electrical Reference|1|Value of time constant in series RC and RL circuits"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "conceptual",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "What is inductive reactance?",
+    "reference_answer": "Inductive reactance is the frequency-dependent opposition to alternating current produced by an inductor and increases with frequency and inductance.",
+    "relevant_source_sections": [
+      "Electrical Reference|1|Inductive reactance"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "conceptual",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "How are impedance, resistance, and reactance related?",
+    "reference_answer": "Impedance combines resistance and reactance as the total opposition to AC, with their relationship represented using magnitude and phase.",
+    "relevant_source_sections": [
+      "Electrical Reference|1|Impedance in relation to R and X"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "conceptual",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "What is the purpose of the SPICE node zero?",
+    "reference_answer": "SPICE uses node zero as the reference or ground node, and circuit netlists must provide a valid reference for node voltages.",
+    "relevant_source_sections": [
+      "Electrical Reference|7|Must have a node 0"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "conceptual",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "What happens when batteries are connected in series?",
+    "reference_answer": "Series-connected batteries add their voltages when oriented aiding, while opposing orientation subtracts their voltage contributions.",
+    "relevant_source_sections": [
+      "Experiments|3|Series batteries"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "conceptual",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "How can a potentiometer act as a voltage divider?",
+    "reference_answer": "A potentiometer provides an adjustable tap on a resistive element, producing a selectable fraction of the applied voltage.",
+    "relevant_source_sections": [
+      "Experiments|3|Potentiometer as a voltage divider"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "conceptual",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "What happens during capacitor charging?",
+    "reference_answer": "A capacitor's voltage rises toward the source voltage during charging, with the rate governed by the circuit resistance and capacitance.",
+    "relevant_source_sections": [
+      "Experiments|3|Capacitor charging and discharging"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "conceptual",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "What does a full-wave bridge rectifier do?",
+    "reference_answer": "A bridge rectifier uses four diodes to produce output of the same polarity during both half-cycles of an AC input.",
+    "relevant_source_sections": [
+      "Experiments|5|Full-wave bridge rectifier"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "conceptual",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "How can a transistor be used as a switch?",
+    "reference_answer": "A transistor switch operates between cutoff and a conducting region so a control signal turns the load current off or on.",
+    "relevant_source_sections": [
+      "Experiments|5|Transistor as a switch"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "conceptual",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "What does a simple op-amp experiment demonstrate?",
+    "reference_answer": "A basic operational-amplifier circuit demonstrates controlled voltage amplification using feedback and appropriate input and supply connections.",
+    "relevant_source_sections": [
+      "Experiments|5|Simple op-amp"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "conceptual",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "A 12 V source feeds 3 ohm and 9 ohm resistors in series. What current flows through the circuit, and what voltage appears across the 9 ohm resistor?",
+    "reference_answer": "The total resistance is 12 ohms, so the series current is 1 A. The 9 ohm resistor drops 9 V.",
+    "relevant_source_sections": [
+      "Direct Current|5|Simple series circuits",
+      "Direct Current|2|How voltage, current, and resistance relate",
+      "Direct Current|6|Voltage divider circuits"
+    ],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "series-circuit calculation",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "Two 6 ohm resistors are connected in parallel across a 12 V supply. Find the equivalent resistance and the total source current.",
+    "reference_answer": "The parallel equivalent is 3 ohms. The source current is 12 V divided by 3 ohms, or 4 A.",
+    "relevant_source_sections": [
+      "Direct Current|5|Simple parallel circuits",
+      "Electrical Reference|1|Series and parallel resistances"
+    ],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "parallel-circuit calculation",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "At a node, 2.4 A and 0.8 A enter while 1.5 A leaves through one branch. What current must leave through the remaining branch?",
+    "reference_answer": "By KCL, total entering current is 3.2 A. The remaining branch must carry 1.7 A leaving the node.",
+    "relevant_source_sections": [
+      "Direct Current|6|Kirchhoff's Current Law (KCL)",
+      "Electrical Reference|1|Kirchhoff's Laws"
+    ],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "KCL node calculation",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "A 24 V loop contains a 10 V source rise and resistor drops of 6 V and 8 V. Is the loop consistent with Kirchhoff's Voltage Law?",
+    "reference_answer": "No. The algebraic sum is 24 - 6 - 8 = 10 V, not zero, so a stated voltage, polarity, or measurement is missing or incorrect.",
+    "relevant_source_sections": [
+      "Direct Current|6|Kirchhoff's Voltage Law (KVL)",
+      "Electrical Reference|1|Kirchhoff's Laws"
+    ],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "KVL troubleshooting",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "Why does opening one resistor branch in a parallel network usually leave the voltage across the other branch unchanged but reduce the source current?",
+    "reference_answer": "Parallel branches share the same two nodes, so an ideal voltage source maintains the other branch voltage. Removing one branch increases equivalent resistance and removes that branch's current from the source total.",
+    "relevant_source_sections": [
+      "Direct Current|5|Simple parallel circuits",
+      "Direct Current|5|Component failure analysis"
+    ],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "component-failure reasoning",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A 10 V divider uses 1 kΩ on top and 4 kΩ on the bottom. The output is measured at their junction relative to the negative terminal. What output should be expected with no load?",
+    "reference_answer": "The output is across the 4 kΩ resistor: 10 V multiplied by 4/(1+4), which is 8 V.",
+    "relevant_source_sections": [
+      "Direct Current|6|Voltage divider circuits",
+      "Direct Current|2|How voltage, current, and resistance relate"
+    ],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "voltage-divider calculation",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "A loaded voltage divider gives a much lower output than its no-load calculation. What circuit change explains this, and how should the load be included in the analysis?",
+    "reference_answer": "The load is in parallel with the divider resistor across which the output is taken, reducing that resistor's effective value. Replace it with the parallel combination before applying the divider calculation.",
+    "relevant_source_sections": [
+      "Direct Current|6|Voltage divider circuits",
+      "Direct Current|7|Analysis technique"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "loaded-divider troubleshooting",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "For a three-branch DC network with unknown branch currents, when is the branch-current method preferable to simply combining resistors in series and parallel?",
+    "reference_answer": "Use the branch-current method when the topology cannot be reduced by series-parallel combinations, especially when multiple sources or shared branches create coupled loops. Assign branch currents and write KCL and KVL equations.",
+    "relevant_source_sections": [
+      "Direct Current|10|What is network analysis?",
+      "Direct Current|10|Branch current method"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "method-selection",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "In mesh analysis, two adjacent meshes share a resistor R. If clockwise mesh currents are I1 and I2, what current should be used for the voltage drop across the shared resistor in mesh 1?",
+    "reference_answer": "The shared-branch current, referenced in mesh 1's direction, is I1 - I2 when the mesh currents oppose each other in that branch. The voltage term is R(I1 - I2).",
+    "relevant_source_sections": [
+      "Direct Current|10|Mesh current method",
+      "Direct Current|10|Mesh Current, conventional method"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "mesh-equation setup",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "A node is connected to ground through 2 kΩ, to a 10 V node through 4 kΩ, and to a 5 V node through 1 kΩ. What equation would the node-voltage method use for the unknown node voltage V?",
+    "reference_answer": "Using currents leaving or entering consistently, one valid equation is V/2000 + (V-10)/4000 + (V-5)/1000 = 0.",
+    "relevant_source_sections": [
+      "Direct Current|10|Node voltage method",
+      "Direct Current|6|Kirchhoff's Current Law (KCL)"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "nodal-analysis calculation",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A source network has a 12 V open-circuit terminal voltage and a 3 Ω resistance seen from the terminals. What load resistance receives maximum power, and why?",
+    "reference_answer": "The load should be 3 Ω, equal to the Thevenin resistance. At that match, the load receives the maximum available power from the linear source network.",
+    "relevant_source_sections": [
+      "Direct Current|10|Thevenin's Theorem",
+      "Direct Current|10|Maximum Power Transfer Theorem"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "network-theorem design",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "How would you find the Norton equivalent of a linear two-terminal network if you already know its Thevenin voltage and resistance?",
+    "reference_answer": "Use the same equivalent resistance and convert the source: Norton current is I_N = V_TH/R_TH, with R_N = R_TH. The Norton source is placed in parallel with that resistance.",
+    "relevant_source_sections": [
+      "Direct Current|10|Thevenin-Norton equivalencies",
+      "Direct Current|10|Norton's Theorem"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "equivalent-circuit conversion",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "A circuit contains two independent voltage sources and one resistor load. How can superposition determine the load current without solving the full simultaneous system at once?",
+    "reference_answer": "Analyze one independent source at a time, replacing other ideal voltage sources with shorts and ideal current sources with opens. Find each resulting load-current contribution and algebraically add them with signs.",
+    "relevant_source_sections": [
+      "Direct Current|10|Superposition Theorem",
+      "Direct Current|10|Introduction to network theorems"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "superposition troubleshooting",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A resistor network is drawn as a triangle, but none of its resistors can be combined directly in series or parallel. Which transformation can make the network reducible, and what must be preserved?",
+    "reference_answer": "Use a Δ-Y or Y-Δ conversion. The transformation must preserve the terminal behavior between the three external connection points, including the currents and voltages seen by the rest of the circuit.",
+    "relevant_source_sections": [
+      "Direct Current|10|Δ-Y and Y-Δ conversions",
+      "Direct Current|10|What is network analysis?"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "topology-reduction strategy",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A technician says two resistors are in series because they are drawn next to each other. What electrical test should be used to verify the claim before combining them?",
+    "reference_answer": "Verify that their shared junction has no other connection. Components are in series only when the same current must flow through both, not merely because of their physical drawing position.",
+    "relevant_source_sections": [
+      "Direct Current|5|What are \"series\" and \"parallel\" circuits?",
+      "Direct Current|7|Re-drawing complex schematics"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "vague",
+    "scenario_type": "schematic-interpretation troubleshooting",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A 5 V step is applied to a series RC circuit with R = 10 kΩ and C = 100 μF. What are the time constant and approximate capacitor voltage after one time constant?",
+    "reference_answer": "The time constant is RC = 1 s. After one time constant during charging, the capacitor is about 63% of its final value, or approximately 3.16 V.",
+    "relevant_source_sections": [
+      "Direct Current|16|Electrical transients",
+      "Direct Current|16|Capacitor transient response",
+      "Electrical Reference|1|Value of time constant in series RC and RL circuits"
+    ],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "RC charging calculation",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A charged capacitor is disconnected from its source and discharged through a resistor. What happens to capacitor voltage and current direction as time passes?",
+    "reference_answer": "The capacitor voltage decays toward zero exponentially. The discharge current initially has its largest magnitude and then decreases toward zero, with its reference sign determined by the chosen polarity and current direction.",
+    "relevant_source_sections": [
+      "Direct Current|16|Capacitor transient response",
+      "Electrical Reference|1|Calculating voltage or current at specified time"
+    ],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "RC discharge explanation",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "An RC timing circuit must reach 90% of its final voltage in about 4.6 seconds. If R is fixed at 47 kΩ, what capacitance is approximately required?",
+    "reference_answer": "Reaching 90% takes about 2.3 time constants, so tau is about 2.0 s. C = tau/R ≈ 2.0/47000 ≈ 42.6 μF, so a nearby standard value around 47 μF is reasonable before tolerance checks.",
+    "relevant_source_sections": [
+      "Direct Current|16|Capacitor transient response",
+      "Direct Current|16|Solving for unknown time",
+      "Electrical Reference|1|Capacitor sizing equation"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "RC component-sizing calculation",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "An inductor initially carries 2 A in an L/R circuit. What qualitative behavior should be expected immediately after a switch opens, and what sets the speed of the current decay?",
+    "reference_answer": "Inductor current cannot change instantaneously, so it initially continues near 2 A and may create a large voltage if no safe current path exists. The decay speed is set by the L/R time constant.",
+    "relevant_source_sections": [
+      "Direct Current|16|Inductor transient response",
+      "Direct Current|16|Why L/R and not LR?",
+      "Electrical Reference|1|Value of time constant in series RC and RL circuits"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "RL switching troubleshooting",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A relay coil has L = 200 mH and its winding resistance is 40 Ω. Estimate the RL time constant and the fraction of final current after three time constants.",
+    "reference_answer": "The time constant is L/R = 0.2/40 = 0.005 s, or 5 ms. After three time constants, current has reached about 95% of its final value during energization.",
+    "relevant_source_sections": [
+      "Direct Current|16|Inductor transient response",
+      "Electrical Reference|1|Value of time constant in series RC and RL circuits",
+      "Electrical Reference|1|Calculating voltage or current at specified time"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "RL transient calculation",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "The capacitor in a real RC circuit seems to charge more slowly than expected, even though the resistor and capacitor labels look correct. What hidden circuit feature should be checked first?",
+    "reference_answer": "Check for additional resistance in series with the charging path, including source resistance, meter resistance, wiring, or a load. The effective resistance and capacitance determine the actual time constant.",
+    "relevant_source_sections": [
+      "Direct Current|16|Capacitor transient response",
+      "Direct Current|16|Complex circuits",
+      "Direct Current|8|Voltmeter impact on measured circuit"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "vague",
+    "scenario_type": "RC measurement troubleshooting",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "A voltmeter connected across a high-resistance divider changes the divider output noticeably. Why does this happen, and what design change reduces the error?",
+    "reference_answer": "The voltmeter's finite input resistance is placed in parallel with the divider portion being measured, loading it and changing the ratio. Use a higher-input-resistance meter or lower divider resistance values when power and loading limits permit.",
+    "relevant_source_sections": [
+      "Direct Current|8|Voltmeter impact on measured circuit",
+      "Direct Current|6|Voltage divider circuits"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "instrument-loading troubleshooting",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "The circuit is 'not working' and the only information provided is that the output is low. What measurements and topology details are needed before deciding whether the fault is a resistor, an open branch, or a wiring error?",
+    "reference_answer": "The diagnosis is underspecified. Request the source voltage, schematic and node connections, expected and measured node voltages, branch currents, resistor values, load state, meter reference point, and whether continuity or supply checks pass. Then apply Ohm's law, KCL/KVL, and failure-analysis rules.",
+    "relevant_source_sections": [
+      "Direct Current|5|Component failure analysis",
+      "Direct Current|7|Component failure analysis",
+      "Direct Current|8|Multimeters",
+      "Electrical Reference|1|Kirchhoff's Laws"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "ambiguous",
+    "scenario_type": "underspecified troubleshooting request",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "A source, an unknown resistor, and a 2 kΩ load form a two-terminal linear network. The open-circuit voltage is 6 V and the short-circuit current is 3 mA. What load voltage should be predicted?",
+    "reference_answer": "The equivalent resistance is V_OC/I_SC = 6 V/0.003 A = 2 kΩ. With a 2 kΩ load, the Thevenin divider gives 6 V multiplied by 2/(2+2) = 3 V.",
+    "relevant_source_sections": [
+      "Direct Current|10|Thevenin's Theorem",
+      "Direct Current|10|Thevenin-Norton equivalencies",
+      "Direct Current|6|Voltage divider circuits"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "Thevenin calculation from measurements",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "A series RC circuit has a measured time constant twice the design value. What combinations of component or wiring changes could cause that observation?",
+    "reference_answer": "Because tau equals effective R times effective C, doubling either effective resistance or capacitance, or a combination whose product doubles, can explain it. Extra series resistance, an unintended parallel capacitor, or component tolerance should be checked.",
+    "relevant_source_sections": [
+      "Direct Current|16|Electrical transients",
+      "Direct Current|16|Complex circuits",
+      "Electrical Reference|1|Value of time constant in series RC and RL circuits"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "vague",
+    "scenario_type": "transient fault isolation",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "Convert hexadecimal 3A7 into binary without first converting it to decimal, and explain why the grouping works.",
+    "reference_answer": "Replace each hexadecimal digit with its four-bit binary equivalent: 3 = 0011, A = 1010, and 7 = 0111, giving 0011 1010 0111. The method works because hexadecimal has base 16, which is 2^4, so each hex digit maps exactly to four binary bits.",
+    "relevant_source_sections": [
+      "Digital Circuits|1|Octal and hexadecimal numeration"
+    ],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "number_conversion",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "A technician writes 0x2F + 0x19 as 0x38. What is the correct hexadecimal sum, and where did the carry occur?",
+    "reference_answer": "The correct sum is 0x48. In the low nibble, F + 9 = 24 decimal, which is hexadecimal 0x18, so write 8 and carry 1 into the high nibble. Then 2 + 1 + 1 = 4.",
+    "relevant_source_sections": [
+      "Digital Circuits|1|Octal and hexadecimal numeration",
+      "Digital Circuits|2|Binary addition"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "arithmetic_debugging",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "Using an 8-bit two's-complement representation, what decimal value does 1110 1011 represent?",
+    "reference_answer": "The most-significant bit is the sign bit, so the value is negative. Invert 11101011 to 00010100, add one to get 00010101, which is 21 decimal. Therefore the original value is -21.",
+    "relevant_source_sections": [
+      "Digital Circuits|2|Negative binary numbers",
+      "Digital Circuits|2|Bit groupings"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "signed_arithmetic",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "Why can adding two positive signed binary numbers produce a negative-looking result even when the carry out is discarded? Give the overflow test.",
+    "reference_answer": "The fixed-width signed range can be exceeded, so the sign bit of the truncated result no longer represents the mathematical result. Adding two positive operands overflows when both operand sign bits are 0 but the result sign bit is 1. A carry out alone is not the signed-overflow test.",
+    "relevant_source_sections": [
+      "Digital Circuits|2|Negative binary numbers",
+      "Digital Circuits|2|Overflow"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "arithmetic_debugging",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A four-bit counter is intended to display decimal 0 through 9, but it reaches 15 before returning to zero. What design property is missing?",
+    "reference_answer": "It is behaving as a modulus-16 binary counter. To display 0 through 9, the design needs modulus-10 behavior, detecting the state after 9 and resetting or otherwise forcing the counter back to 0.",
+    "relevant_source_sections": [
+      "Digital Circuits|11|Binary count sequence",
+      "Digital Circuits|11|Counter modulus"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "counter_debugging",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "Simplify F = A + A'B using Boolean algebra, and identify the absorption step.",
+    "reference_answer": "F simplifies to A + B. One route is A + A'B = (A + A')(A + B) = 1(A + B) = A + B. The key identity is the distributive form of the absorption relationship.",
+    "relevant_source_sections": [
+      "Digital Circuits|7|Boolean algebraic identities",
+      "Digital Circuits|7|Boolean rules for simplification"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "boolean_simplification",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "Given a truth table with output 1 at minterms m(1, 3, 5, 7), how would you write its canonical sum-of-products expression for inputs A, B, and C?",
+    "reference_answer": "The canonical expression is A'B'C + A'BC + AB'C + ABC. These are the minterms whose binary indices are 001, 011, 101, and 111.",
+    "relevant_source_sections": [
+      "Digital Circuits|7|Converting truth tables into Boolean expressions",
+      "Digital Circuits|8|Σ (sum) and Π (product) notation"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "truth_table_translation",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A four-variable Karnaugh map has 1s at minterms 0, 1, 2, 3, 8, 9, 10, and 11. What largest grouping should be made, and what simplified term remains?",
+    "reference_answer": "Group all eight adjacent 1-cells as one octet. In the conventional ABCD minterm ordering, A changes across the group while B remains 0, so A is eliminated and the simplified function is F = B'.",
+    "relevant_source_sections": [
+      "Digital Circuits|8|Larger 4-variable Karnaugh maps",
+      "Digital Circuits|8|Logic simplification with Karnaugh maps"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "karnaugh_simplification",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "In a Karnaugh map, why may the left and right edges be grouped together even though they are drawn apart?",
+    "reference_answer": "A Karnaugh map represents adjacency cyclically, so the left and right edges are neighboring cells. Grouping them is valid when the cells differ in only one variable, just like grouping cells across any other map boundary.",
+    "relevant_source_sections": [
+      "Digital Circuits|8|Making a Venn diagram look like a Karnaugh map",
+      "Digital Circuits|8|Logic simplification with Karnaugh maps"
+    ],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "karnaugh_concept",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A sensor input is irrelevant whenever an emergency override is active. How should that condition be represented on a Karnaugh map, and why can it improve the circuit?",
+    "reference_answer": "Mark the irrelevant input combinations as don't-care cells. They may be grouped as 1s or ignored as 0s, whichever permits larger groups and a simpler Boolean implementation. This can reduce the number of gates or literals.",
+    "relevant_source_sections": [
+      "Digital Circuits|8|Don't care cells in the Karnaugh map",
+      "Digital Circuits|8|Logic simplification with Karnaugh maps"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "logic_design",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A control output must be high when exactly one of two limit switches is active. Which gate or Boolean function should be used, and what happens if both switches close?",
+    "reference_answer": "Use an exclusive-OR function. It is high when the inputs differ, so it is high for exactly one active switch and low when both switches are open or both are closed.",
+    "relevant_source_sections": [
+      "Digital Circuits|3|The Exclusive-OR gate",
+      "Digital Circuits|7|The Exclusive-OR function"
+    ],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "control_logic_design",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A circuit uses only NAND gates, but the designer needs an inverter. How can one NAND gate be wired to act as NOT, and what loading caution applies?",
+    "reference_answer": "Tie all inputs of the NAND gate together, or connect the unused input to a logic-high level, so the output is the complement of the signal. In TTL, tying inputs together increases current loading on the driving gate; in CMOS, added input capacitance can reduce switching speed.",
+    "relevant_source_sections": [
+      "Digital Circuits|3|Gate universality",
+      "Digital Circuits|3|Constructing the NOT function"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "gate_level_design",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A CMOS gate input is left disconnected and the output changes when a hand approaches the board. What wiring issue should be suspected first?",
+    "reference_answer": "Suspect a floating CMOS input. It is not reliably interpreted as either logic state and can pick up noise or capacitive interference. Tie the input to a defined high or low level with an appropriate connection rather than leaving it open.",
+    "relevant_source_sections": [
+      "Digital Circuits|3|CMOS gate circuitry",
+      "Digital Circuits|3|Logic signal voltage levels"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "practical_debugging",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A pushbutton is supposed to produce one clean transition, but a counter advances several counts per press. What physical effect and digital remedy fit this symptom?",
+    "reference_answer": "The likely cause is mechanical contact bounce, which creates several rapid make-and-break transitions. Debounce the signal with suitable hardware or timing logic before feeding it to the counter.",
+    "relevant_source_sections": [
+      "Digital Circuits|4|Contact \"bounce\"",
+      "Digital Circuits|11|Asynchronous counters"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "switch_debugging",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "Why can an asynchronous ripple counter briefly pass through unwanted states during a transition, while a synchronous counter changes stages together?",
+    "reference_answer": "In an asynchronous counter, each stage is clocked by the preceding stage, so propagation delays ripple through the chain and intermediate states can appear. A synchronous counter supplies the clock to all stages together, reducing that ripple timing behavior, although its combinational logic still has propagation delay.",
+    "relevant_source_sections": [
+      "Digital Circuits|11|Asynchronous counters",
+      "Digital Circuits|11|Synchronous counters"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "timing_analysis",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "The output of a D latch follows its input while enable is active but holds the last value when enable goes inactive. Is that a latch or an edge-triggered flip-flop, and why?",
+    "reference_answer": "It is a level-sensitive D latch. When enabled, it is transparent and follows D; when disabled, it stores the last value. An edge-triggered flip-flop samples on a clock edge rather than throughout an enabled level.",
+    "relevant_source_sections": [
+      "Digital Circuits|10|The D latch",
+      "Digital Circuits|10|Edge-triggered latches: Flip-Flops"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "sequential_logic_identification",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A J-K flip-flop has J = 1 and K = 1 at the active clock edge. What state transition should be expected?",
+    "reference_answer": "The flip-flop toggles: Q changes to the complement of its previous state at the active clock edge.",
+    "relevant_source_sections": [
+      "Digital Circuits|10|The J-K flip-flop"
+    ],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "flip_flop_behavior",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "A flip-flop's asynchronous clear is asserted while the clock is stopped, and Q changes immediately. What does this reveal about the clear input?",
+    "reference_answer": "The clear is asynchronous because it can force the stored state independently of the clock. It acts immediately when asserted, subject to the device's specified timing and polarity.",
+    "relevant_source_sections": [
+      "Digital Circuits|10|Asynchronous flip-flop inputs"
+    ],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "sequential_debugging",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "What is the practical difference between a combinational circuit and a sequential circuit when diagnosing an output that depends on past inputs?",
+    "reference_answer": "A combinational output depends only on the current input values, while a sequential output also depends on stored state created by previous inputs and clock or control events. A history-dependent symptom therefore points toward memory elements, feedback, or state-transition logic.",
+    "relevant_source_sections": [
+      "Digital Circuits|9|Introduction",
+      "Digital Circuits|10|Digital logic with feedback",
+      "Digital Circuits|11|Finite State Machines"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "architecture_debugging",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "A relay-controlled motor remains energized for a short time after the command is removed. Which Kuphaldt device category could intentionally provide that delay, and what should be checked if the delay is erratic?",
+    "reference_answer": "A time-delay relay can intentionally hold or delay contact operation. If the timing is erratic, inspect the relay's timing mechanism, control voltage, contacts, and any switch bounce or unstable input driving it.",
+    "relevant_source_sections": [
+      "Digital Circuits|5|Time-delay relays",
+      "Digital Circuits|4|Contact \"bounce\"",
+      "Digital Circuits|6|Motor control circuits"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "industrial_debugging",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "The machine should not start unless the guard is closed and the operator-enable switch is pressed. How would this permissive be represented in ladder logic, and what happens if either contact opens?",
+    "reference_answer": "Place the guard permissive and operator-enable contact in series in the rung controlling the start output. Both conditions must be true for the rung to energize; opening either contact breaks the path and removes the permissive.",
+    "relevant_source_sections": [
+      "Digital Circuits|6|Digital logic functions",
+      "Digital Circuits|6|Permissive and interlock circuits",
+      "Digital Circuits|6|Fail-safe design"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "ladder_logic_design",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "I have a logic circuit that flickers around the clock edge. What should I look at first?",
+    "reference_answer": "Check clock-edge timing and propagation delays, setup or hold behavior of the storage element, switch or input bounce, and whether asynchronous inputs are being changed near the sampling edge. The exact diagnosis needs the circuit type, waveform timing, and logic levels.",
+    "relevant_source_sections": [
+      "Digital Circuits|10|Edge-triggered latches: Flip-Flops",
+      "Digital Circuits|11|Asynchronous counters",
+      "Digital Circuits|4|Contact \"bounce\""
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "vague",
+    "scenario_type": "timing_debugging",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "The map is giving me a simpler answer, but the hardware is still too big. What might I be missing?",
+    "reference_answer": "The simplification may be algebraically valid but not mapped to the available gate types, fan-in limits, or implementation constraints. Recheck the Karnaugh grouping, consider don't-care cells, and then account for the cost of converting the result into the permitted gates.",
+    "relevant_source_sections": [
+      "Digital Circuits|8|Logic simplification with Karnaugh maps",
+      "Digital Circuits|8|Don't care cells in the Karnaugh map",
+      "Digital Circuits|3|Gate universality"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "ambiguous",
+    "scenario_type": "design_debugging",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "What is the difference between a multiplexer and a demultiplexer, and how would you use each to route one signal through a digital system?",
+    "reference_answer": "A multiplexer selects one of several inputs and connects it to one output using select lines. A demultiplexer takes one input and routes it to one of several outputs using select lines. Together they can select and distribute digital data paths.",
+    "relevant_source_sections": [
+      "Digital Circuits|9|Demultiplexers",
+      "Digital Circuits|9|Multiplexers"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "combinational_design",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A serial-in, parallel-out shift register receives bits correctly, but the parallel outputs are reversed. What wiring or clock-order assumption should be checked?",
+    "reference_answer": "Check which stage is defined as the first or least-significant output, the physical order of the stages, and whether the receiver expects the first shifted bit at the opposite end. Serial shift direction and bit-order labeling must agree with the wiring and clock sequence.",
+    "relevant_source_sections": [
+      "Digital Circuits|12|Serial-in, parallel-out shift register",
+      "Digital Circuits|12|Practical applications"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "shift_register_debugging",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "Why does a silicon junction diode conduct readily in one polarity but block current in the other, and what changes when it is reverse biased beyond its normal operating region?",
+    "reference_answer": "Forward bias reduces the junction barrier so majority carriers cross the junction and substantial current flows. Reverse bias widens the depletion region and leaves only a small leakage current until breakdown mechanisms produce a large reverse current, which is safe only for diodes designed and rated for it.",
+    "relevant_source_sections": [
+      "Semiconductors|2|Junction diodes",
+      "Semiconductors|2|The P-N junction",
+      "Semiconductors|3|Diode ratings"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "device_behavior_explanation",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "I need a diode for a 24 V rectifier that may see brief reverse spikes. Which ratings should I check before choosing a part?",
+    "reference_answer": "Check at least the repetitive and peak reverse-voltage ratings, forward-current rating, surge-current capability, power dissipation, and thermal limits. The selected diode must tolerate the worst-case reverse voltage and startup or fault current with appropriate margin, not merely the nominal 24 V value.",
+    "relevant_source_sections": [
+      "Semiconductors|3|Diode ratings",
+      "Semiconductors|3|Rectifier circuits",
+      "Electrical Reference|7|DIODES"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "component_selection",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "For a low-voltage, high-frequency rectifier, when might a Schottky diode be preferable to a conventional junction diode, and what tradeoff must be considered?",
+    "reference_answer": "A Schottky diode can be attractive because its lower forward voltage reduces conduction loss and its majority-carrier operation supports fast switching. The tradeoffs include higher reverse leakage and limited reverse-voltage ratings compared with many ordinary rectifier diodes, so the operating conditions must be checked.",
+    "relevant_source_sections": [
+      "Semiconductors|3|Schottky diodes",
+      "Semiconductors|3|Diode switching circuits",
+      "Semiconductors|3|Diode ratings"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "technology_comparison",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "What is the practical difference between a diode clipper and a clamper when conditioning an AC waveform?",
+    "reference_answer": "A clipper limits or removes portions of a waveform once a voltage threshold is reached. A clamper shifts the waveform's DC level while tending to preserve its shape and peak-to-peak amplitude, using diode conduction and capacitor charge.",
+    "relevant_source_sections": [
+      "Semiconductors|3|Clipper circuits",
+      "Semiconductors|3|Clamper circuits",
+      "Semiconductors|3|Peak detector"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "circuit_comparison",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A sensor output needs a voltage that varies with capacitance. How can a varactor diode be used, and what bias condition is required?",
+    "reference_answer": "A varactor is operated in reverse bias so its depletion-region capacitance changes with applied voltage. The circuit can use that voltage-dependent capacitance for tuning or sensing, while keeping the diode within its reverse-voltage and signal limits.",
+    "relevant_source_sections": [
+      "Semiconductors|3|Varicap or varactor diodes",
+      "Semiconductors|2|Junction diodes",
+      "Semiconductors|3|Diode ratings"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "sensor_interface_design",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "How does a photodiode produce an electrical signal from light, and why is its bias choice important?",
+    "reference_answer": "Incident light generates electron-hole pairs in the junction, producing a photocurrent related to the received light. Reverse bias is commonly used to improve response speed and linearity by widening the depletion region, but it increases the importance of leakage and breakdown limits.",
+    "relevant_source_sections": [
+      "Semiconductors|3|Photodiodes",
+      "Semiconductors|2|The P-N junction",
+      "Semiconductors|3|Diode ratings"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "optoelectronic_explanation",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "The LED in my indicator keeps failing. What circuit detail is probably missing, and how should the replacement resistor be chosen?",
+    "reference_answer": "An LED generally needs a current-limiting element because a small increase above its forward voltage can cause a large current increase. Choose the resistor from the supply voltage, expected LED forward voltage, and desired current, then verify resistor and LED power ratings and polarity.",
+    "relevant_source_sections": [
+      "Semiconductors|3|Light-emitting diodes",
+      "Semiconductors|3|Diode ratings",
+      "Electrical Reference|1|Ohm's and Joule's Laws"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "vague",
+    "scenario_type": "troubleshooting_and_component_selection",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "In a BJT amplifier, what does active-mode operation require, and why is biasing needed before applying a signal?",
+    "reference_answer": "Active-mode operation requires the base-emitter junction to be forward biased while the base-collector junction is reverse biased. Biasing establishes a suitable quiescent operating point so the signal can vary collector current without immediately driving the transistor into cutoff or saturation.",
+    "relevant_source_sections": [
+      "Semiconductors|4|Active mode operation",
+      "Semiconductors|4|Biasing techniques",
+      "Semiconductors|4|The common-emitter amplifier"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "transistor_biasing",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "How would you choose between a common-emitter and common-collector BJT stage for a voltage-buffer role?",
+    "reference_answer": "A common-emitter stage is suited to voltage gain but introduces phase inversion and usually has lower input and higher output impedance than a buffer. A common-collector stage, or emitter follower, provides approximately unity voltage gain, high input impedance, and low output impedance, making it the better buffer choice.",
+    "relevant_source_sections": [
+      "Semiconductors|4|The common-emitter amplifier",
+      "Semiconductors|4|The common-collector amplifier",
+      "Semiconductors|4|Amplifier impedances"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "amplifier_stage_selection",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "Why can thermal runaway occur in a BJT power stage, and what design practices reduce the risk?",
+    "reference_answer": "Increasing junction temperature can increase collector current or alter the bias point, which raises dissipation and can create a reinforcing feedback loop. Emitter resistance, appropriate bias compensation, heat sinking, current limiting, and staying within transistor thermal ratings reduce the risk.",
+    "relevant_source_sections": [
+      "Semiconductors|4|Thermal runaway",
+      "Semiconductors|4|Temperature drift",
+      "Semiconductors|4|Transistor ratings and packages"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "reliability_and_thermal_design",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A BJT circuit works at room temperature but its bias shifts badly when heated. Which biasing ideas should I investigate?",
+    "reference_answer": "Investigate emitter-bias and voltage-divider bias, temperature compensation, emitter resistance, and the transistor's temperature drift. A bias network that depends too strongly on base-emitter voltage or transistor beta is less stable, while feedback through the emitter resistor can improve stability.",
+    "relevant_source_sections": [
+      "Semiconductors|4|Temperature drift",
+      "Semiconductors|4|Emitter-bias",
+      "Semiconductors|4|Voltage divider bias",
+      "Semiconductors|4|Biasing calculations"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "vague",
+    "scenario_type": "analog_troubleshooting",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "What makes a common-source JFET stage different from a common-source MOSFET stage when selecting a high-impedance input device?",
+    "reference_answer": "Both use gate voltage to control channel current and can provide voltage gain, but their device physics and bias behavior differ. A JFET gate is a reverse-biased junction, while a MOSFET uses an insulated gate, so gate protection, input leakage, allowable gate voltage, and bias requirements must be checked for the chosen device.",
+    "relevant_source_sections": [
+      "Semiconductors|2|Junction field-effect transistors",
+      "Semiconductors|2|Insulated-gate field-effect transistors (MOSFET)",
+      "Semiconductors|4|Amplifier impedances"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "transistor_family_selection",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "What does negative feedback change in an operational amplifier circuit, and why is it normally preferred for linear amplification?",
+    "reference_answer": "Negative feedback feeds part of the output back in opposition to the input difference. It sets a predictable closed-loop relationship, reduces sensitivity to open-loop gain variation, improves linearity, and can alter bandwidth and impedances, provided the circuit remains stable.",
+    "relevant_source_sections": [
+      "Semiconductors|8|Negative feedback",
+      "Semiconductors|8|Operational amplifier models",
+      "Semiconductors|8|Practical considerations"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "op_amp_feedback_explanation",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "My precision op-amp circuit has a nonzero output even when both inputs are tied together. What nonideal parameters could explain it?",
+    "reference_answer": "Input offset voltage, input bias currents, common-mode gain, and drift can create an output even with equal input voltages. The error depends on the source and feedback resistances, temperature, common-mode range, and the particular op-amp model.",
+    "relevant_source_sections": [
+      "Semiconductors|8|Offset voltage",
+      "Semiconductors|8|Bias current",
+      "Semiconductors|8|Common-mode gain",
+      "Semiconductors|8|Drift"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "precision_analog_troubleshooting",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "When is an instrumentation amplifier a better choice than a single-ended voltage amplifier for a small sensor signal?",
+    "reference_answer": "An instrumentation amplifier is preferable when the desired signal is differential and rides on a potentially large common-mode voltage. Its architecture is intended to provide high input impedance, controlled differential gain, and strong common-mode rejection, subject to input-range and resistor-matching limits.",
+    "relevant_source_sections": [
+      "Semiconductors|8|The instrumentation amplifier",
+      "Semiconductors|8|Single-ended and differential amplifiers",
+      "Semiconductors|8|Common-mode gain"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "sensor_amplifier_selection",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "If an op-amp must turn a square wave into a ramp, what feedback function is relevant and what practical limitation should be considered?",
+    "reference_answer": "An op-amp integrator produces an output proportional to the time integral of the input, so a constant level from a square wave creates a ramp. A practical circuit must control DC buildup and account for saturation, finite bandwidth, slew rate, and component tolerances.",
+    "relevant_source_sections": [
+      "Semiconductors|8|Differentiator and integrator circuits",
+      "Electrical Reference|7|Op-amp integrator with squarewave input",
+      "Experiments|6|Integrator"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "waveform_conditioning_design",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "I need to remove slow drift from a sensor but keep its faster changes. Should I start with a high-pass or low-pass filter, and why?",
+    "reference_answer": "Start with a high-pass filter because it attenuates low-frequency and DC components while passing faster changes above its cutoff. The cutoff must be chosen from the sensor's drift spectrum and the fastest signal content, with attention to phase shift and loading.",
+    "relevant_source_sections": [
+      "Alternating Current|8|High-pass filters",
+      "Alternating Current|8|What is a filter?",
+      "Semiconductors|10|ACTIVE FILTERS"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "filter_selection",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "What is the difference between a band-pass and a band-stop filter in terms of the frequencies they preserve?",
+    "reference_answer": "A band-pass filter passes a selected range between lower and upper cutoff frequencies while attenuating frequencies outside that range. A band-stop filter rejects a selected band and passes frequencies below and above it.",
+    "relevant_source_sections": [
+      "Alternating Current|8|Band-pass filters",
+      "Alternating Current|8|Band-stop filters",
+      "Alternating Current|8|What is a filter?"
+    ],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "filter_concept_comparison",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "Why would an active two-pole filter be chosen instead of a single passive RC section when a design needs sharper selectivity?",
+    "reference_answer": "A two-pole response can provide a steeper transition and a more controlled frequency response than a single-pole RC section. An active implementation can also provide buffering or gain, but it requires a suitable powered amplifier and introduces op-amp bandwidth, stability, noise, and output-swing constraints.",
+    "relevant_source_sections": [
+      "Semiconductors|10|ACTIVE FILTERS",
+      "Semiconductors|10|Two pole active filters",
+      "Alternating Current|8|Resonant filters"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "filter_architecture_selection",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "What are the main differences between a linear power supply and a switching power supply, and what would make one a better fit for a heat-sensitive product?",
+    "reference_answer": "A linear supply regulates by dissipating excess voltage, usually making low noise and simple behavior at the cost of efficiency and heat. A switching supply transfers energy through high-frequency switching and can be much more efficient and cooler, but it brings ripple, EMI, filtering, and control complexity.",
+    "relevant_source_sections": [
+      "Semiconductors|9|Linear power supplies",
+      "Semiconductors|9|Power Supply types",
+      "Semiconductors|9|Power Supply Introduction"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "power_supply_architecture_selection",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "A rectifier output sags and has large ripple under load. Which blocks of a basic supply should I inspect, and what measurements distinguish them?",
+    "reference_answer": "Inspect the transformer or source, rectifier diodes, reservoir capacitor and filter network, regulator, wiring, and load. Measure AC input and secondary voltage, rectified DC before filtering, ripple across the capacitor, regulated output, and load current to separate source, rectifier, filtering, regulation, and overload faults.",
+    "relevant_source_sections": [
+      "Experiments|4|Transformer -- power supply",
+      "Experiments|5|Rectifier/filter circuit",
+      "Experiments|5|Voltage regulator",
+      "Electrical Reference|8|Power supply problems"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "power_supply_troubleshooting",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "For a small DC supply from an AC transformer, how does adding a capacitor after the rectifier change the output, and what tradeoffs should guide its value?",
+    "reference_answer": "The capacitor charges near the rectified peaks and supplies load current between peaks, raising the average DC level and reducing ripple. A larger capacitor usually reduces ripple but increases charging surge, diode and transformer stress, startup time, physical size, and stored energy.",
+    "relevant_source_sections": [
+      "Experiments|5|Rectifier/filter circuit",
+      "Experiments|5|Full-wave bridge rectifier",
+      "Electrical Reference|1|Capacitor sizing equation",
+      "Electrical Reference|1|AC power"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "power_supply_component_selection",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "I want a transistor stage, an op-amp stage, and a filter, but I have not said the signal level, bandwidth, supply rails, load, or noise target. What should be specified before selecting components?",
+    "reference_answer": "No unique component choice is justified yet. Specify source and load impedance, signal amplitude and bias range, required gain, bandwidth or cutoff frequencies, allowable distortion and noise, supply voltage and current, temperature range, protection needs, and physical or cost constraints. Those requirements determine whether a BJT, JFET, MOSFET, op-amp, passive filter, or active filter is appropriate and set component ratings and values.",
+    "relevant_source_sections": [
+      "Semiconductors|1|Amplifiers",
+      "Semiconductors|4|Amplifier impedances",
+      "Semiconductors|8|Practical considerations",
+      "Semiconductors|10|Two pole active filters",
+      "Semiconductors|4|Transistor ratings and packages"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "ambiguous",
+    "scenario_type": "underspecified_design_request",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "The power supply is 'kind of noisy' and the amplifier 'sounds wrong.' What information would you need before deciding whether the problem is the supply, filter, bias, or amplifier stage?",
+    "reference_answer": "Ask for the supply topology and rails, measured DC and ripple under load, load current, grounding and wiring, amplifier input and output waveforms, gain and bandwidth, bias voltages, symptoms versus frequency and load, recent changes, and whether the fault follows a stage when sections are tested separately. Without those details, several causes remain plausible.",
+    "relevant_source_sections": [
+      "Electrical Reference|8|Power supply problems",
+      "Electrical Reference|8|Divide system into sections and test those sections",
+      "Electrical Reference|8|Trap a signal",
+      "Semiconductors|8|Practical considerations"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "vague",
+    "scenario_type": "underspecified_troubleshooting_request",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "For an audio input that must not load a high-impedance sensor, what amplifier characteristics and circuit arrangement should guide the choice?",
+    "reference_answer": "Prefer an input stage with high input impedance and low input bias current so the sensor is not significantly loaded. A voltage follower or other appropriately feedback-controlled buffer can provide near-unity voltage gain and a lower output impedance to drive the next stage, while its bandwidth, noise, offset, and supply range must also fit the signal.",
+    "relevant_source_sections": [
+      "Experiments|5|Voltage follower",
+      "Semiconductors|4|Amplifier impedances",
+      "Semiconductors|8|Bias current",
+      "Semiconductors|8|Practical considerations"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "buffer_component_selection",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "Why does an open circuit stop current even when a voltage source is still connected?",
+    "reference_answer": "An open circuit has a broken or intentionally interrupted conductive path, so charge cannot complete a path through the source and load. The source voltage may still be present across the open point, but the circuit current is essentially zero.",
+    "relevant_source_sections": [
+      "Direct Current|1|Electric circuits",
+      "Direct Current|1|Voltage and current in a practical circuit"
+    ],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "conceptual_dc",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A resistor gets hotter after I increase the supply voltage. What electrical quantity explains that?",
+    "reference_answer": "The resistor dissipates electrical power, and for a fixed resistance power increases with the square of voltage, P = V²/R. The increased power becomes heat, so the component temperature rises if the heat is not removed.",
+    "relevant_source_sections": [
+      "Direct Current|2|Power in electric circuits",
+      "Direct Current|2|Calculating electric power"
+    ],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "component_behavior",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "What does it mean when a component has nonlinear resistance?",
+    "reference_answer": "A nonlinear component does not maintain a constant voltage-to-current ratio. Its effective resistance changes with operating point, so doubling the applied voltage does not necessarily double the current.",
+    "relevant_source_sections": [
+      "Direct Current|2|Nonlinear conduction",
+      "Experiments|2|Nonlinear resistance"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "component_behavior",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "One branch of my resistor network is drawing too much current. How does a current divider help me reason about it?",
+    "reference_answer": "In parallel branches, the source voltage is common to each branch and branch current is set by that branch's resistance. A lower-resistance branch takes a larger share of the total current, which is the basis of current-divider analysis.",
+    "relevant_source_sections": [
+      "Direct Current|6|Current divider circuits",
+      "Direct Current|5|Simple parallel circuits"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "troubleshooting_dc",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "How can an open resistor and a shorted resistor look different when troubleshooting a circuit?",
+    "reference_answer": "An open resistor interrupts its branch, so the branch current is near zero and the open component may have nearly the source voltage across it. A shorted resistor has very little voltage across it and can force excessive current through the branch or other components.",
+    "relevant_source_sections": [
+      "Direct Current|5|Component failure analysis",
+      "Direct Current|5|Simple series circuits",
+      "Direct Current|5|Simple parallel circuits"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "troubleshooting_dc",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "Why can connecting a voltmeter change the voltage I am trying to measure?",
+    "reference_answer": "A real voltmeter has finite input resistance. When connected across a circuit element, it forms a parallel load and can alter the circuit voltage, especially when the circuit's own resistance is high compared with the meter resistance.",
+    "relevant_source_sections": [
+      "Direct Current|8|Voltmeter design",
+      "Direct Current|8|Voltmeter impact on measured circuit"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "measurement",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "I put the meter in current mode and the circuit voltage collapsed. What likely went wrong?",
+    "reference_answer": "An ammeter is designed to have very low resistance and must be inserted in series. Placing it directly across a source or load can create an unintended near-short circuit, causing the voltage to collapse and potentially damaging the meter or circuit.",
+    "relevant_source_sections": [
+      "Direct Current|8|Ammeter design",
+      "Direct Current|8|Ammeter impact on measured circuit",
+      "Direct Current|3|Safe meter usage"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "measurement_troubleshooting",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "When is a four-wire resistance measurement better than simply placing an ohmmeter across the part?",
+    "reference_answer": "A Kelvin or four-wire measurement is useful when lead and contact resistance would be significant compared with the unknown resistance. Separate force and sense connections reduce the error caused by voltage drops in the current-carrying leads.",
+    "relevant_source_sections": [
+      "Direct Current|8|Kelvin (4-wire) resistance measurement",
+      "Experiments|3|4-wire resistance measurement"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "precision_measurement",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "How do I read the value and tolerance of a four-band resistor?",
+    "reference_answer": "The first two bands give the significant digits, the third band gives the multiplier, and the fourth band gives the tolerance. The bands should be interpreted using the resistor color-code table and the stated band order.",
+    "relevant_source_sections": [
+      "Electrical Reference|2|Resistor Color Codes"
+    ],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "component_identification",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "A battery label lists ampere-hours. What does that rating tell me, and what does it not guarantee?",
+    "reference_answer": "An ampere-hour rating represents a specified amount of charge delivery under stated test conditions, roughly current multiplied by time. It does not by itself guarantee the same runtime at every load, because discharge rate and practical battery behavior affect available capacity.",
+    "relevant_source_sections": [
+      "Direct Current|11|Battery ratings",
+      "Direct Current|11|Practical considerations"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "component_selection",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "Why might a fuse open even though the equipment seemed to work normally before?",
+    "reference_answer": "A fuse opens when current exceeds its protective operating condition for long enough, which can result from a short circuit, overload, startup or inrush current, or another fault. The fuse should be treated as evidence of a current problem rather than simply replaced with a larger one.",
+    "relevant_source_sections": [
+      "Direct Current|12|Fuses",
+      "Direct Current|12|Conductor ampacity",
+      "Direct Current|3|Safe circuit design"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "troubleshooting_protection",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "What changes when two capacitors are connected in parallel instead of in series?",
+    "reference_answer": "Parallel capacitors have a total capacitance equal to the sum of their capacitances. Series capacitors combine to a smaller equivalent capacitance, with the reciprocal values adding, and voltage sharing depends on the individual capacitances.",
+    "relevant_source_sections": [
+      "Direct Current|13|Series and parallel capacitors",
+      "Electrical Reference|1|Series and Parallel Capacitances"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "component_network",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "How does a changing magnetic field produce a voltage in a nearby conductor?",
+    "reference_answer": "Electromagnetic induction occurs when changing magnetic flux through a conductor or coil induces an electromotive force. A larger or faster-changing flux linkage generally produces a larger induced voltage, with polarity opposing the change according to the induction rule.",
+    "relevant_source_sections": [
+      "Direct Current|14|Electromagnetic induction",
+      "Experiments|2|Electromagnetic induction"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "electromagnetism",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "What does AC phase tell me that an RMS voltage value alone does not?",
+    "reference_answer": "Phase describes the relative timing or angular displacement between AC waveforms, such as voltage and current. RMS magnitude describes size or heating-equivalent level, but it does not specify whether one waveform leads or lags another.",
+    "relevant_source_sections": [
+      "Alternating Current|1|AC phase",
+      "Alternating Current|1|Measurements of AC magnitude"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "ac_fundamentals",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "In an ideal AC resistor circuit, what happens to the phase relationship between voltage and current?",
+    "reference_answer": "For an ideal resistor, voltage and current are in phase. Their zero crossings and peaks occur together, and the opposition to AC is resistive rather than frequency-dependent reactance.",
+    "relevant_source_sections": [
+      "Alternating Current|3|AC resistor circuits",
+      "Electrical Reference|1|Ohm's Law for AC"
+    ],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "ac_fundamentals",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "Why does a capacitor pass more AC current as frequency increases?",
+    "reference_answer": "Capacitive reactance decreases as frequency increases, according to the inverse relationship between reactance, frequency, and capacitance. With less opposition at the same applied AC voltage, the current increases.",
+    "relevant_source_sections": [
+      "Alternating Current|4|AC capacitor circuits",
+      "Electrical Reference|1|Capacitive reactance"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "ac_component_behavior",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "What is the practical purpose of using a transformer for electrical isolation?",
+    "reference_answer": "A transformer can transfer AC energy magnetically while keeping the primary and secondary conductors electrically separate. This isolation can reduce direct conductive shock paths and allow a circuit to reference the secondary independently, subject to proper safety practice.",
+    "relevant_source_sections": [
+      "Alternating Current|9|Mutual inductance and basic operation",
+      "Alternating Current|9|Electrical isolation"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "component_application",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "A three-phase motor spins the wrong way after rewiring. What should I check first?",
+    "reference_answer": "Check the phase sequence or phase rotation. Interchanging two of the three supply conductors reverses the phase sequence and commonly reverses the direction of a three-phase motor.",
+    "relevant_source_sections": [
+      "Alternating Current|10|Phase rotation",
+      "Alternating Current|10|Three-phase power systems",
+      "Alternating Current|13|Motor starting and speed control"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "troubleshooting_ac",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "Can someone explain the difference between real, reactive, and apparent power without making it too abstract?",
+    "reference_answer": "Real power is the average power converted to useful work or heat. Reactive power represents energy exchanged back and forth by inductors and capacitors. Apparent power combines the voltage and current magnitudes, and the relationship among the three is reflected by power factor.",
+    "relevant_source_sections": [
+      "Alternating Current|11|Power in resistive and reactive AC circuits",
+      "Alternating Current|11|True, Reactive, and Apparent power"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "vague",
+    "scenario_type": "ac_power",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "My AC meter gives a number, but I need to know whether the waveform is distorted and what its frequency is. What kind of measurement is missing?",
+    "reference_answer": "A magnitude-only reading is insufficient for waveform shape and frequency. Frequency and phase measurement, along with waveform observation or analysis, is needed to characterize timing and distortion rather than just voltage or current magnitude.",
+    "relevant_source_sections": [
+      "Alternating Current|12|Frequency and phase measurement",
+      "Alternating Current|1|AC waveforms",
+      "Experiments|4|Waveform analysis"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "measurement_diagnostics",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "What is a low-pass filter actually doing to a changing signal?",
+    "reference_answer": "A low-pass filter passes lower-frequency components more readily and attenuates higher-frequency components. Its transition behavior depends on the circuit elements and their frequency-dependent impedance.",
+    "relevant_source_sections": [
+      "Alternating Current|8|What is a filter?",
+      "Alternating Current|8|Low-pass filters"
+    ],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "signal_conditioning",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "The reading is weird and the circuit is dead. What should I measure first?",
+    "reference_answer": "The question is underspecified, but a safe troubleshooting sequence starts by identifying the reference and checking whether the source voltage is present, then verifying the circuit path and component voltages or currents with the correct meter function and connection. The exact checks depend on whether the fault is an open, short, missing supply, or measurement setup error.",
+    "relevant_source_sections": [
+      "Direct Current|3|Safe meter usage",
+      "Direct Current|5|Component failure analysis",
+      "Direct Current|8|Multimeters",
+      "Direct Current|1|Voltage and current in a practical circuit"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "ambiguous",
+    "scenario_type": "underspecified_troubleshooting",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "Why is my resistor divider output not the value I calculated when I connect a load?",
+    "reference_answer": "The load is connected in parallel with the divider resistor that supplies the output, changing the effective resistance and therefore the division ratio. A loaded divider must include the load resistance in the equivalent calculation rather than assuming an unloaded output.",
+    "relevant_source_sections": [
+      "Direct Current|6|Voltage divider circuits",
+      "Direct Current|5|Simple parallel circuits",
+      "Direct Current|8|Voltmeter impact on measured circuit"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "troubleshooting_dc",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "I have a coil that behaves fine at low frequency but becomes much harder to drive at high frequency. Why?",
+    "reference_answer": "An inductor's reactance increases with frequency and inductance, so the coil presents greater opposition to AC current as frequency rises. Real inductors can also show parasitic effects and losses that make their behavior depart from an ideal inductor.",
+    "relevant_source_sections": [
+      "Alternating Current|3|AC inductor circuits",
+      "Electrical Reference|1|Inductive reactance",
+      "Alternating Current|3|Inductor quirks"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "vague",
+    "scenario_type": "ac_component_troubleshooting",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "A diode in my rectifier seems to conduct on the wrong half-cycle. How should I think about the fault?",
+    "reference_answer": "A rectifier's diode orientation determines which half-cycle is conducted and the polarity of the output. If conduction occurs on the wrong half-cycle, check diode orientation, wiring, and whether the observed waveform is being measured with the intended reference and polarity.",
+    "relevant_source_sections": [
+      "Experiments|5|Half-wave rectifier",
+      "Experiments|5|Full-wave bridge rectifier",
+      "Direct Current|8|Multimeters"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "component_troubleshooting",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "Why can a battery's amp-hour rating not by itself tell me how much power it can deliver to a load?",
+    "reference_answer": "An amp-hour rating describes charge capacity over a stated discharge condition, not the battery's terminal voltage, internal resistance, or allowable discharge rate. Power depends on both voltage and current, so battery ratings and the operating load must be considered together.",
+    "relevant_source_sections": [
+      "Direct Current|11|Battery ratings",
+      "Direct Current|11|Battery construction"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "battery-rating-interpretation",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "Two batteries are wired in parallel, but one is reversed. What should I check before energizing the circuit, and why is this more serious than simply getting the wrong total voltage?",
+    "reference_answer": "Check polarity, battery condition, and the intended connection before closing the circuit. A reversed parallel battery can drive a large circulating current between sources, limited mainly by internal and wiring resistance, causing heating, damage, or an unsafe condition rather than merely changing the load voltage.",
+    "relevant_source_sections": [
+      "Direct Current|11|Battery construction",
+      "Direct Current|3|Common sources of hazard",
+      "Direct Current|3|Safe circuit design"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "safety-minded-battery-diagnosis",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "My homemade potato battery shows voltage on a meter but cannot light the small lamp. Is it broken?",
+    "reference_answer": "Not necessarily. The potato battery experiment can produce a measurable open-circuit voltage, but its available current may be too small for the lamp. Check the load current requirement, electrode connections, and whether cells are combined in series or another suitable arrangement.",
+    "relevant_source_sections": [
+      "Experiments|3|Potato battery",
+      "Direct Current|11|Battery ratings",
+      "Direct Current|3|Safe meter usage"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "vague",
+    "scenario_type": "context-poor-experiment-troubleshooting",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "What does Faraday's law help predict when a changing current in one coil produces a voltage in a nearby coil?",
+    "reference_answer": "A changing magnetic field or changing magnetic flux linking the nearby coil induces an electromotive force. The induced voltage depends on the rate of change of linked flux and its polarity opposes the change that produced it.",
+    "relevant_source_sections": [
+      "Direct Current|14|Electromagnetic induction",
+      "Experiments|2|Electromagnetic induction",
+      "Alternating Current|9|Mutual inductance and basic operation"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "magnetic-induction-concept",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "Why does an iron-core inductor or transformer get hot when its core experiences eddy currents, and what design idea reduces that loss?",
+    "reference_answer": "Eddy currents circulate within the conductive core in response to changing magnetic flux and dissipate energy as heat. Laminating the core or otherwise increasing the resistance of unwanted current paths reduces those circulating currents and the associated loss.",
+    "relevant_source_sections": [
+      "Direct Current|15|Magnetic fields and inductance",
+      "Alternating Current|9|Energy losses",
+      "Alternating Current|9|Heat and Noise"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "magnetic-loss-diagnosis",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "A transformer output is lower than expected only when a load is connected. Which transformer concepts should guide the diagnosis?",
+    "reference_answer": "Compare the no-load and loaded secondary voltage and consider voltage regulation, winding resistance, power capacity, and losses. An overloaded transformer or excessive winding drop can make the loaded voltage fall even when the unloaded ratio appears correct.",
+    "relevant_source_sections": [
+      "Alternating Current|9|Voltage regulation",
+      "Alternating Current|9|Power capacity",
+      "Alternating Current|9|Energy losses"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "vague",
+    "scenario_type": "transformer-fault-isolation",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "Follow-up: if the transformer primary and secondary waveforms have the expected frequency but opposite polarity, what should I inspect before assuming the transformer is defective?",
+    "reference_answer": "Inspect winding phasing, lead markings, and the relative dot or polarity convention. A reversed winding connection can change the phase relationship without changing the frequency or necessarily indicating a failed transformer.",
+    "relevant_source_sections": [
+      "Alternating Current|9|Phasing",
+      "Alternating Current|9|Winding configurations"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "ambiguous",
+    "scenario_type": "conversational-transformer-follow-up",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "Why can a transformer draw a large current at switch-on even when its steady-state load is modest?",
+    "reference_answer": "The energizing event can create inrush current as the core flux and magnetization conditions settle. The size depends on switching phase, residual flux, and core behavior, so a brief high current does not automatically mean the steady load is excessive.",
+    "relevant_source_sections": [
+      "Alternating Current|9|Inrush current",
+      "Alternating Current|9|Core saturation"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "power-on-diagnosis",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "What is the practical difference between a potential transformer and a current transformer in an AC measurement system?",
+    "reference_answer": "A potential transformer scales a high voltage to a safer, measurable voltage, while a current transformer produces a proportional secondary current for measuring a line current. Their connections and operating precautions differ, especially because a current-transformer secondary should not be treated like an open ordinary voltage source while energized.",
+    "relevant_source_sections": [
+      "Alternating Current|9|Potential transformers",
+      "Alternating Current|9|Current transformers",
+      "Alternating Current|12|AC instrumentation transducers"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "instrumentation-transformer-selection",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "In a three-phase system, why does phase rotation matter if the measured line-to-line voltage magnitudes are all normal?",
+    "reference_answer": "Phase rotation determines the order in which the phase voltages reach their corresponding positions and therefore the direction of the rotating magnetic field in a three-phase motor. Magnitudes can look normal while reversed phase order makes the motor rotate backward.",
+    "relevant_source_sections": [
+      "Alternating Current|10|Phase rotation",
+      "Alternating Current|10|Three-phase power systems",
+      "Alternating Current|13|Tesla polyphase induction motors"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "three-phase-motor-diagnosis",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "I have three equal loads and a source with a neutral. When is a wye connection useful, and how does it differ from delta for the same three-phase system?",
+    "reference_answer": "A wye connection joins one end of each phase load at a common neutral point and can provide a neutral reference and line-to-neutral loads. A delta connection joins the phases end-to-end without that central neutral, with different relationships between line and phase voltages and currents.",
+    "relevant_source_sections": [
+      "Alternating Current|10|Three-phase Y and Delta configurations",
+      "Alternating Current|10|Three-phase power systems"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "three-phase-connection-comparison",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A three-phase panel has balanced fundamental currents but a hot neutral. What corpus concepts would you investigate before blaming the neutral conductor?",
+    "reference_answer": "Investigate harmonic currents, especially the behavior of triplen or zero-sequence components in polyphase systems, because some harmonic currents can add in the neutral rather than cancel as balanced fundamental currents do. Also verify the measurement method and actual load waveform.",
+    "relevant_source_sections": [
+      "Alternating Current|10|Harmonics in polyphase power systems",
+      "Alternating Current|10|Harmonic phase sequences",
+      "Alternating Current|12|Power quality measurement"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "multi-domain-power-quality-diagnosis",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "Why does adding a capacitor across an inductive AC load improve power factor without being the same thing as reducing the real load power?",
+    "reference_answer": "The capacitor supplies leading reactive current that offsets part of the lagging reactive current drawn by the inductive load, reducing apparent current and improving power factor. The real power consumed by the load is not automatically reduced by the correction.",
+    "relevant_source_sections": [
+      "Alternating Current|11|Calculating power factor",
+      "Alternating Current|11|Practical power factor correction",
+      "Alternating Current|11|True, Reactive, and Apparent power"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "AC-power-factor-correction",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "The meter says 120 V, but the resistor heats more than expected. What measurement question should I ask about the meter before concluding the circuit violates the power calculation?",
+    "reference_answer": "Ask whether the instrument reports true RMS for the waveform being measured. RMS is tied to equivalent heating effect, while some meters assume a sinusoid and can misreport nonsinusoidal voltage, leading to an incorrect estimate of resistor heating.",
+    "relevant_source_sections": [
+      "Alternating Current|12|AC instrumentation transducers",
+      "Alternating Current|1|Measurements of AC magnitude",
+      "Alternating Current|11|Power in resistive and reactive AC circuits"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "vague",
+    "scenario_type": "instrumentation-and-power-diagnosis",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "What is an oscilloscope actually showing when I probe a circuit node, and why must I think about the probe reference before connecting it?",
+    "reference_answer": "An oscilloscope displays voltage versus time at the probe tip relative to its reference or ground connection. The reference connection is part of the circuit, so an inappropriate connection can short nodes together or create a shock hazard, especially in power circuits.",
+    "relevant_source_sections": [
+      "Alternating Current|1|AC waveforms",
+      "Experiments|4|PC Oscilloscope",
+      "Direct Current|3|Safe meter usage",
+      "Direct Current|3|Common sources of hazard"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "safe-instrument-use",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "Can I clip my grounded oscilloscope lead to any point that looks like ground?",
+    "reference_answer": "No. Confirm what the instrument reference is connected to and whether the circuit node is safe for that reference. A grounded oscilloscope connection can create an unintended short or expose the operator to hazardous voltage, so use low-voltage isolated experiments or an appropriate differential measurement method.",
+    "relevant_source_sections": [
+      "Experiments|4|PC Oscilloscope",
+      "Direct Current|3|Safe meter usage",
+      "Direct Current|3|Safe practices",
+      "Direct Current|3|Shock current path"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "ambiguous",
+    "scenario_type": "safety-minded-follow-up",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "Why does SPICE require node zero, and what kind of simulation mistake can appear if a circuit has an otherwise floating reference?",
+    "reference_answer": "Node zero is SPICE's reference or ground node, so node voltages need a defined reference. Omitting it or leaving the simulated circuit without a valid reference can make the netlist invalid or produce undefined and misleading node-voltage results.",
+    "relevant_source_sections": [
+      "Electrical Reference|7|Must have a node 0",
+      "Electrical Reference|7|A good beginning",
+      "Electrical Reference|7|Fundamentals of SPICE programming"
+    ],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "SPICE-netlist-basics",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "My SPICE netlist contains an ideal voltage source and an inductor in a loop, and the simulator complains. What modeling workaround does the corpus suggest, and what physical imperfection does it represent?",
+    "reference_answer": "Add a small series resistance or otherwise avoid an ideal source-inductor loop that SPICE cannot solve as written. The added resistance represents the nonzero resistance present in real wiring or windings and also removes the mathematically singular ideal loop.",
+    "relevant_source_sections": [
+      "Electrical Reference|7|Avoid certain component loops",
+      "Electrical Reference|7|INDUCTORS",
+      "Electrical Reference|7|Transformer circuit"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "SPICE-debugging-and-modeling",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "Follow-up to a SPICE AC result: why might the printed current phase look 180 degrees away from the phase I calculate by hand?",
+    "reference_answer": "SPICE's current sign convention can report current relative to the voltage-source reference direction, so the displayed phase may differ by 180 degrees from a hand calculation using the opposite current direction. Interpret the reference direction before treating the result as a circuit error.",
+    "relevant_source_sections": [
+      "Alternating Current|3|AC inductor circuits",
+      "Electrical Reference|7|AC phase shift demonstration",
+      "Electrical Reference|7|Analysis options"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "ambiguous",
+    "scenario_type": "conversational-SPICE-follow-up",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "How would you use a SPICE model and a real measurement together to distinguish an incorrectly wired transformer from a transformer with excessive losses?",
+    "reference_answer": "First model the expected winding ratio, phasing, loading, and coupling, then compare no-load and loaded voltage and current measurements. A wiring or phasing error should show a topology or polarity mismatch, while excessive voltage drop, heat, or current beyond the ideal model points toward winding, core, or other losses.",
+    "relevant_source_sections": [
+      "Electrical Reference|7|Transformer circuit",
+      "Alternating Current|9|Phasing",
+      "Alternating Current|9|Energy losses",
+      "Alternating Current|9|Voltage regulation"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "multi-domain-model-to-bench-diagnosis",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "A student says, 'It only sparks for an instant, so it must be safe.' How should the electrical-safety material correct that reasoning?",
+    "reference_answer": "A brief event can still deliver dangerous current, cause burns, ignite materials, damage equipment, or expose a person to a hazardous shock path. Safety depends on voltage, available current, energy, circuit conditions, and the person's path, not merely on how long the visible spark lasts.",
+    "relevant_source_sections": [
+      "Direct Current|3|Physiological effects of electricity",
+      "Direct Current|3|Common sources of hazard",
+      "Direct Current|3|Shock current path",
+      "Direct Current|3|Safe practices"
+    ],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "safety-misconception",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "What is the point of the transformer power-supply experiment if the circuit is powered from a small source rather than utility voltage?",
+    "reference_answer": "It demonstrates transformer action, winding relationships, and induced AC voltage in a controlled low-energy setting. Using a small source supports experimentation while reducing shock, fire, and equipment hazards compared with working directly from mains power.",
+    "relevant_source_sections": [
+      "Experiments|4|Transformer -- power supply",
+      "Experiments|4|Build a transformer",
+      "Direct Current|3|Safe circuit design"
+    ],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "safe-experiment-design",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "In the induction-motor experiment, what physical chain connects the applied AC, the rotating magnetic field, and the observed rotor motion?",
+    "reference_answer": "The phase-shifted stator currents create a rotating magnetic field, which induces effects in the rotor and produces torque. The rotor follows the rotating field with the behavior expected of an induction motor rather than being driven by a direct mechanical connection.",
+    "relevant_source_sections": [
+      "Experiments|4|Induction motor",
+      "Alternating Current|10|Three-phase power systems",
+      "Alternating Current|13|Tesla polyphase induction motors"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "experiment-to-theory-connection",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "The current transformer reading is wrong, the three-phase motor is turning backward, and the protection trips on startup. Could these be separate faults, or is there a connected diagnostic path?",
+    "reference_answer": "They could be connected through phase identification, current-transformer wiring, phase rotation, and startup or inrush current. Verify the measurement transformer connections and polarity, confirm phase sequence, and distinguish a brief starting current from an abnormal sustained current before replacing components.",
+    "relevant_source_sections": [
+      "Alternating Current|9|Current transformers",
+      "Alternating Current|10|Phase rotation",
+      "Alternating Current|9|Inrush current",
+      "Alternating Current|13|Tesla polyphase induction motors",
+      "Direct Current|3|Safe meter usage"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "vague",
+    "scenario_type": "multi-symptom-three-phase-diagnosis",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "Can you explain what is going on here? The waveform is ugly, the transformer hums, and the neutral gets warm.",
+    "reference_answer": "The symptoms suggest investigating nonsinusoidal loads, harmonics, transformer heating or noise, and harmonic phase behavior in the three-phase system. Confirm the waveform and RMS measurements with suitable instrumentation, then check whether harmonic currents are accumulating in the neutral and increasing transformer losses.",
+    "relevant_source_sections": [
+      "Alternating Current|10|Harmonics in polyphase power systems",
+      "Alternating Current|10|Harmonic phase sequences",
+      "Alternating Current|9|Heat and Noise",
+      "Alternating Current|12|Power quality measurement"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "vague",
+    "scenario_type": "context-poor-power-quality-investigation",
+    "expected_retrieval_hops": "3+"
+  }
+]

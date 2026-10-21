@@ -1,0 +1,63 @@
+{
+  "benchmark": "YOLO backend comparison",
+  "date": "2026-10-21",
+  "machine": {
+    "gpu": "NVIDIA CMP 40HX",
+    "cuda_available": true,
+    "input_image": "data/documents/kuphaldt/AC/02471.png",
+    "image_size": [588, 390],
+    "imgsz": 640,
+    "warmup_iterations": 8,
+    "timed_iterations": 30,
+    "measurement": "End-to-end Ultralytics inference call with CUDA synchronization around timed calls"
+  },
+  "models": {
+    "pytorch": "data/models/circuit-component-detector/yolo26m_obb_16class_aug.pt",
+    "onnx": "data/models/circuit-component-detector/yolo26m_obb_16class_aug.onnx",
+    "tensorrt": "data/models/circuit-component-detector/yolo26m_obb_16class_aug.engine"
+  },
+  "results": {
+    "pytorch": {
+      "device": "CUDA:0",
+      "detections_first_run": 16,
+      "mean_latency_ms": 16.470,
+      "median_latency_ms": 16.013,
+      "p95_latency_ms": 18.085,
+      "min_latency_ms": 15.602,
+      "max_latency_ms": 18.093,
+      "throughput_fps": 60.715
+    },
+    "onnx": {
+      "provider_requested": "CUDAExecutionProvider",
+      "providers_available": [
+        "TensorrtExecutionProvider",
+        "CUDAExecutionProvider",
+        "CPUExecutionProvider"
+      ],
+      "detections_first_run": 14,
+      "mean_latency_ms": 19.571,
+      "median_latency_ms": 19.541,
+      "p95_latency_ms": 19.881,
+      "min_latency_ms": 19.341,
+      "max_latency_ms": 19.895,
+      "throughput_fps": 51.097,
+      "caveat": "ONNX Runtime emitted a warning that no registered plugin EP device was found for CUDAExecutionProvider. Treat this as not fully comparable to a clean all-GPU run."
+    },
+    "tensorrt": {
+      "device": "CUDA:0",
+      "engine_precision": "FP16",
+      "detections_first_run": 14,
+      "mean_latency_ms": 7.122,
+      "median_latency_ms": 7.089,
+      "p95_latency_ms": 7.535,
+      "min_latency_ms": 6.864,
+      "max_latency_ms": 7.604,
+      "throughput_fps": 140.408
+    }
+  },
+  "comparison": {
+    "tensorrt_speedup_vs_pytorch": 2.31,
+    "tensorrt_latency_reduction_vs_pytorch_percent": 56.8,
+    "conclusion": "TensorRT is the fastest measured backend on this machine."
+  }
+}

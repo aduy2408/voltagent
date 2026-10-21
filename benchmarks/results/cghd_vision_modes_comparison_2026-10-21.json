@@ -1,0 +1,82 @@
+{
+  "benchmark": "CGHD 50-image vision mode comparison",
+  "date": "2026-10-21",
+  "dataset": "data/evaluation/cghd/subset",
+  "images": 50,
+  "drafters": ["drafter_1", "drafter_2", "drafter_3", "drafter_4", "drafter_5"],
+  "evaluation": {
+    "ground_truth": "Pascal VOC XML annotations mapped from 61 CGHD labels to the existing 16 detector classes",
+    "common_metric": "Visible component inventory count comparison, micro precision/recall/F1, exact inventory match, and mean absolute count error",
+    "yolo_detection_metric": "Existing TensorRT YOLO box evaluation at IoU 0.50",
+    "comparability_warning": "DeepSeek-only and YOLO-plus-DeepSeek were not given or scored on ground-truth bounding boxes. Their inventory metrics are not mAP, IoU, or localization metrics and must not be compared directly with YOLO mAP."
+  },
+  "results": {
+    "yolo_only": {
+      "inventory": {
+        "images": 50,
+        "micro_precision": 0.9141483516483516,
+        "micro_recall": 0.8785478547854786,
+        "micro_f1": 0.895994614607876,
+        "exact_inventory_match": 0.0,
+        "mean_absolute_count_error": 6.18,
+        "tp": 1331,
+        "fp": 125,
+        "fn": 184
+      },
+      "detection": {
+        "backend": "TensorRT",
+        "map50_subset": 0.587694640155509,
+        "precision_at_iou50_and_conf025": 0.8262362637362637,
+        "recall_at_iou50_and_conf025": 0.7940594059405941,
+        "f1_at_iou50_and_conf025": 0.8098283406260519,
+        "elapsed_seconds": 3.878
+      },
+      "artifact": "benchmarks/results/yolo_accuracy_subset_2026-10-21.json"
+    },
+    "yolo_plus_deepseek": {
+      "parse_success_rate": 1.0,
+      "request_failures": 0,
+      "inventory": {
+        "images": 50,
+        "micro_precision": 0.8993028659953525,
+        "micro_recall": 0.7663366336633664,
+        "micro_f1": 0.8275124732715609,
+        "exact_inventory_match": 0.0,
+        "mean_absolute_count_error": 9.68,
+        "tp": 1161,
+        "fp": 130,
+        "fn": 354
+      },
+      "artifact": "benchmarks/results/cghd_yolo_plus_deepseek_2026-10-21.json"
+    },
+    "deepseek_only": {
+      "parse_success_rate": 1.0,
+      "request_failures": 0,
+      "inventory": {
+        "images": 50,
+        "micro_precision": 0.8492520138089759,
+        "micro_recall": 0.4871287128712871,
+        "micro_f1": 0.6191275167785235,
+        "exact_inventory_match": 0.0,
+        "mean_absolute_count_error": 18.16,
+        "tp": 738,
+        "fp": 131,
+        "fn": 777
+      },
+      "artifact": "benchmarks/results/cghd_deepseek_only_2026-10-21.json"
+    }
+  },
+  "interpretation": [
+    "YOLO-only is strongest on the common inventory F1 metric: 0.896.",
+    "YOLO plus DeepSeek improves over DeepSeek-only by 0.208 inventory F1 points, but is below YOLO-only by 0.068 points.",
+    "The hybrid mode reduces missed components substantially versus DeepSeek-only, from 777 false negatives to 354.",
+    "Exact full-inventory match is 0.0 for all modes because the subset contains dense diagrams and the comparison uses exact class counts.",
+    "The LLM modes were not scored for bounding-box IoU. Their results measure structured component inventory extraction, while YOLO detection metrics measure localized instances."
+  ],
+  "limitations": [
+    "This is a 50-image subset, not the full CGHD validation set.",
+    "The LLM evaluation asks DeepSeek for canonical component labels and counts, not boxes.",
+    "DeepSeek was evaluated with a separate request per image and had 100 percent JSON parse success, but API latency was high.",
+    "The hybrid prompt supplied summarized YOLO evidence as untrusted evidence and asked DeepSeek to verify it against the image."
+  ]
+}

@@ -1,0 +1,227 @@
+[
+  {
+    "question": "Convert hexadecimal 3A7 into binary without first converting it to decimal, and explain why the grouping works.",
+    "reference_answer": "Replace each hexadecimal digit with its four-bit binary equivalent: 3 = 0011, A = 1010, and 7 = 0111, giving 0011 1010 0111. The method works because hexadecimal has base 16, which is 2^4, so each hex digit maps exactly to four binary bits.",
+    "relevant_source_sections": ["Digital Circuits|1|Octal and hexadecimal numeration"],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "number_conversion",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "A technician writes 0x2F + 0x19 as 0x38. What is the correct hexadecimal sum, and where did the carry occur?",
+    "reference_answer": "The correct sum is 0x48. In the low nibble, F + 9 = 24 decimal, which is hexadecimal 0x18, so write 8 and carry 1 into the high nibble. Then 2 + 1 + 1 = 4.",
+    "relevant_source_sections": ["Digital Circuits|1|Octal and hexadecimal numeration", "Digital Circuits|2|Binary addition"],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "arithmetic_debugging",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "Using an 8-bit two's-complement representation, what decimal value does 1110 1011 represent?",
+    "reference_answer": "The most-significant bit is the sign bit, so the value is negative. Invert 11101011 to 00010100, add one to get 00010101, which is 21 decimal. Therefore the original value is -21.",
+    "relevant_source_sections": ["Digital Circuits|2|Negative binary numbers", "Digital Circuits|2|Bit groupings"],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "signed_arithmetic",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "Why can adding two positive signed binary numbers produce a negative-looking result even when the carry out is discarded? Give the overflow test.",
+    "reference_answer": "The fixed-width signed range can be exceeded, so the sign bit of the truncated result no longer represents the mathematical result. Adding two positive operands overflows when both operand sign bits are 0 but the result sign bit is 1. A carry out alone is not the signed-overflow test.",
+    "relevant_source_sections": ["Digital Circuits|2|Negative binary numbers", "Digital Circuits|2|Overflow"],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "arithmetic_debugging",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A four-bit counter is intended to display decimal 0 through 9, but it reaches 15 before returning to zero. What design property is missing?",
+    "reference_answer": "It is behaving as a modulus-16 binary counter. To display 0 through 9, the design needs modulus-10 behavior, detecting the state after 9 and resetting or otherwise forcing the counter back to 0.",
+    "relevant_source_sections": ["Digital Circuits|11|Binary count sequence", "Digital Circuits|11|Counter modulus"],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "counter_debugging",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "Simplify F = A + A'B using Boolean algebra, and identify the absorption step.",
+    "reference_answer": "F simplifies to A + B. One route is A + A'B = (A + A')(A + B) = 1(A + B) = A + B. The key identity is the distributive form of the absorption relationship.",
+    "relevant_source_sections": ["Digital Circuits|7|Boolean algebraic identities", "Digital Circuits|7|Boolean rules for simplification"],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "boolean_simplification",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "Given a truth table with output 1 at minterms m(1, 3, 5, 7), how would you write its canonical sum-of-products expression for inputs A, B, and C?",
+    "reference_answer": "The canonical expression is A'B'C + A'BC + AB'C + ABC. These are the minterms whose binary indices are 001, 011, 101, and 111.",
+    "relevant_source_sections": ["Digital Circuits|7|Converting truth tables into Boolean expressions", "Digital Circuits|8|Σ (sum) and Π (product) notation"],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "truth_table_translation",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A four-variable Karnaugh map has 1s at minterms 0, 1, 2, 3, 8, 9, 10, and 11. What largest grouping should be made, and what simplified term remains?",
+    "reference_answer": "Group all eight adjacent 1-cells as one octet. In the conventional ABCD minterm ordering, A changes across the group while B remains 0, so A is eliminated and the simplified function is F = B'.",
+    "relevant_source_sections": ["Digital Circuits|8|Larger 4-variable Karnaugh maps", "Digital Circuits|8|Logic simplification with Karnaugh maps"],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "karnaugh_simplification",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "In a Karnaugh map, why may the left and right edges be grouped together even though they are drawn apart?",
+    "reference_answer": "A Karnaugh map represents adjacency cyclically, so the left and right edges are neighboring cells. Grouping them is valid when the cells differ in only one variable, just like grouping cells across any other map boundary.",
+    "relevant_source_sections": ["Digital Circuits|8|Making a Venn diagram look like a Karnaugh map", "Digital Circuits|8|Logic simplification with Karnaugh maps"],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "karnaugh_concept",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A sensor input is irrelevant whenever an emergency override is active. How should that condition be represented on a Karnaugh map, and why can it improve the circuit?",
+    "reference_answer": "Mark the irrelevant input combinations as don't-care cells. They may be grouped as 1s or ignored as 0s, whichever permits larger groups and a simpler Boolean implementation. This can reduce the number of gates or literals.",
+    "relevant_source_sections": ["Digital Circuits|8|Don't care cells in the Karnaugh map", "Digital Circuits|8|Logic simplification with Karnaugh maps"],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "logic_design",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A control output must be high when exactly one of two limit switches is active. Which gate or Boolean function should be used, and what happens if both switches close?",
+    "reference_answer": "Use an exclusive-OR function. It is high when the inputs differ, so it is high for exactly one active switch and low when both switches are open or both are closed.",
+    "relevant_source_sections": ["Digital Circuits|3|The Exclusive-OR gate", "Digital Circuits|7|The Exclusive-OR function"],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "control_logic_design",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A circuit uses only NAND gates, but the designer needs an inverter. How can one NAND gate be wired to act as NOT, and what loading caution applies?",
+    "reference_answer": "Tie all inputs of the NAND gate together, or connect the unused input to a logic-high level, so the output is the complement of the signal. In TTL, tying inputs together increases current loading on the driving gate; in CMOS, added input capacitance can reduce switching speed.",
+    "relevant_source_sections": ["Digital Circuits|3|Gate universality", "Digital Circuits|3|Constructing the NOT function"],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "gate_level_design",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A CMOS gate input is left disconnected and the output changes when a hand approaches the board. What wiring issue should be suspected first?",
+    "reference_answer": "Suspect a floating CMOS input. It is not reliably interpreted as either logic state and can pick up noise or capacitive interference. Tie the input to a defined high or low level with an appropriate connection rather than leaving it open.",
+    "relevant_source_sections": ["Digital Circuits|3|CMOS gate circuitry", "Digital Circuits|3|Logic signal voltage levels"],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "practical_debugging",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A pushbutton is supposed to produce one clean transition, but a counter advances several counts per press. What physical effect and digital remedy fit this symptom?",
+    "reference_answer": "The likely cause is mechanical contact bounce, which creates several rapid make-and-break transitions. Debounce the signal with suitable hardware or timing logic before feeding it to the counter.",
+    "relevant_source_sections": ["Digital Circuits|4|Contact \"bounce\"", "Digital Circuits|11|Asynchronous counters"],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "switch_debugging",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "Why can an asynchronous ripple counter briefly pass through unwanted states during a transition, while a synchronous counter changes stages together?",
+    "reference_answer": "In an asynchronous counter, each stage is clocked by the preceding stage, so propagation delays ripple through the chain and intermediate states can appear. A synchronous counter supplies the clock to all stages together, reducing that ripple timing behavior, although its combinational logic still has propagation delay.",
+    "relevant_source_sections": ["Digital Circuits|11|Asynchronous counters", "Digital Circuits|11|Synchronous counters"],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "timing_analysis",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "The output of a D latch follows its input while enable is active but holds the last value when enable goes inactive. Is that a latch or an edge-triggered flip-flop, and why?",
+    "reference_answer": "It is a level-sensitive D latch. When enabled, it is transparent and follows D; when disabled, it stores the last value. An edge-triggered flip-flop samples on a clock edge rather than throughout an enabled level.",
+    "relevant_source_sections": ["Digital Circuits|10|The D latch", "Digital Circuits|10|Edge-triggered latches: Flip-Flops"],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "sequential_logic_identification",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A J-K flip-flop has J = 1 and K = 1 at the active clock edge. What state transition should be expected?",
+    "reference_answer": "The flip-flop toggles: Q changes to the complement of its previous state at the active clock edge.",
+    "relevant_source_sections": ["Digital Circuits|10|The J-K flip-flop"],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "flip_flop_behavior",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "A flip-flop's asynchronous clear is asserted while the clock is stopped, and Q changes immediately. What does this reveal about the clear input?",
+    "reference_answer": "The clear is asynchronous because it can force the stored state independently of the clock. It acts immediately when asserted, subject to the device's specified timing and polarity.",
+    "relevant_source_sections": ["Digital Circuits|10|Asynchronous flip-flop inputs"],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "sequential_debugging",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "What is the practical difference between a combinational circuit and a sequential circuit when diagnosing an output that depends on past inputs?",
+    "reference_answer": "A combinational output depends only on the current input values, while a sequential output also depends on stored state created by previous inputs and clock or control events. A history-dependent symptom therefore points toward memory elements, feedback, or state-transition logic.",
+    "relevant_source_sections": ["Digital Circuits|9|Introduction", "Digital Circuits|10|Digital logic with feedback", "Digital Circuits|11|Finite State Machines"],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "architecture_debugging",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "A relay-controlled motor remains energized for a short time after the command is removed. Which Kuphaldt device category could intentionally provide that delay, and what should be checked if the delay is erratic?",
+    "reference_answer": "A time-delay relay can intentionally hold or delay contact operation. If the timing is erratic, inspect the relay's timing mechanism, control voltage, contacts, and any switch bounce or unstable input driving it.",
+    "relevant_source_sections": ["Digital Circuits|5|Time-delay relays", "Digital Circuits|4|Contact \"bounce\"", "Digital Circuits|6|Motor control circuits"],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "industrial_debugging",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "The machine should not start unless the guard is closed and the operator-enable switch is pressed. How would this permissive be represented in ladder logic, and what happens if either contact opens?",
+    "reference_answer": "Place the guard permissive and operator-enable contact in series in the rung controlling the start output. Both conditions must be true for the rung to energize; opening either contact breaks the path and removes the permissive.",
+    "relevant_source_sections": ["Digital Circuits|6|Digital logic functions", "Digital Circuits|6|Permissive and interlock circuits", "Digital Circuits|6|Fail-safe design"],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "ladder_logic_design",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "I have a logic circuit that flickers around the clock edge. What should I look at first?",
+    "reference_answer": "Check clock-edge timing and propagation delays, setup or hold behavior of the storage element, switch or input bounce, and whether asynchronous inputs are being changed near the sampling edge. The exact diagnosis needs the circuit type, waveform timing, and logic levels.",
+    "relevant_source_sections": ["Digital Circuits|10|Edge-triggered latches: Flip-Flops", "Digital Circuits|11|Asynchronous counters", "Digital Circuits|4|Contact \"bounce\""],
+    "difficulty": "hard",
+    "intent_clarity": "vague",
+    "scenario_type": "timing_debugging",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "The map is giving me a simpler answer, but the hardware is still too big. What might I be missing?",
+    "reference_answer": "The simplification may be algebraically valid but not mapped to the available gate types, fan-in limits, or implementation constraints. Recheck the Karnaugh grouping, consider don't-care cells, and then account for the cost of converting the result into the permitted gates.",
+    "relevant_source_sections": ["Digital Circuits|8|Logic simplification with Karnaugh maps", "Digital Circuits|8|Don't care cells in the Karnaugh map", "Digital Circuits|3|Gate universality"],
+    "difficulty": "hard",
+    "intent_clarity": "ambiguous",
+    "scenario_type": "design_debugging",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "What is the difference between a multiplexer and a demultiplexer, and how would you use each to route one signal through a digital system?",
+    "reference_answer": "A multiplexer selects one of several inputs and connects it to one output using select lines. A demultiplexer takes one input and routes it to one of several outputs using select lines. Together they can select and distribute digital data paths.",
+    "relevant_source_sections": ["Digital Circuits|9|Demultiplexers", "Digital Circuits|9|Multiplexers"],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "combinational_design",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A serial-in, parallel-out shift register receives bits correctly, but the parallel outputs are reversed. What wiring or clock-order assumption should be checked?",
+    "reference_answer": "Check which stage is defined as the first or least-significant output, the physical order of the stages, and whether the receiver expects the first shifted bit at the opposite end. Serial shift direction and bit-order labeling must agree with the wiring and clock sequence.",
+    "relevant_source_sections": ["Digital Circuits|12|Serial-in, parallel-out shift register", "Digital Circuits|12|Practical applications"],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "shift_register_debugging",
+    "expected_retrieval_hops": "2"
+  }
+]

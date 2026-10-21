@@ -1,0 +1,335 @@
+[
+  {
+    "question": "Why does a silicon junction diode conduct readily in one polarity but block current in the other, and what changes when it is reverse biased beyond its normal operating region?",
+    "reference_answer": "Forward bias reduces the junction barrier so majority carriers cross the junction and substantial current flows. Reverse bias widens the depletion region and leaves only a small leakage current until breakdown mechanisms produce a large reverse current, which is safe only for diodes designed and rated for it.",
+    "relevant_source_sections": [
+      "Semiconductors|2|Junction diodes",
+      "Semiconductors|2|The P-N junction",
+      "Semiconductors|3|Diode ratings"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "device_behavior_explanation",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "I need a diode for a 24 V rectifier that may see brief reverse spikes. Which ratings should I check before choosing a part?",
+    "reference_answer": "Check at least the repetitive and peak reverse-voltage ratings, forward-current rating, surge-current capability, power dissipation, and thermal limits. The selected diode must tolerate the worst-case reverse voltage and startup or fault current with appropriate margin, not merely the nominal 24 V value.",
+    "relevant_source_sections": [
+      "Semiconductors|3|Diode ratings",
+      "Semiconductors|3|Rectifier circuits",
+      "Electrical Reference|7|DIODES"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "component_selection",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "For a low-voltage, high-frequency rectifier, when might a Schottky diode be preferable to a conventional junction diode, and what tradeoff must be considered?",
+    "reference_answer": "A Schottky diode can be attractive because its lower forward voltage reduces conduction loss and its majority-carrier operation supports fast switching. The tradeoffs include higher reverse leakage and limited reverse-voltage ratings compared with many ordinary rectifier diodes, so the operating conditions must be checked.",
+    "relevant_source_sections": [
+      "Semiconductors|3|Schottky diodes",
+      "Semiconductors|3|Diode switching circuits",
+      "Semiconductors|3|Diode ratings"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "technology_comparison",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "What is the practical difference between a diode clipper and a clamper when conditioning an AC waveform?",
+    "reference_answer": "A clipper limits or removes portions of a waveform once a voltage threshold is reached. A clamper shifts the waveform's DC level while tending to preserve its shape and peak-to-peak amplitude, using diode conduction and capacitor charge.",
+    "relevant_source_sections": [
+      "Semiconductors|3|Clipper circuits",
+      "Semiconductors|3|Clamper circuits",
+      "Semiconductors|3|Peak detector"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "circuit_comparison",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A sensor output needs a voltage that varies with capacitance. How can a varactor diode be used, and what bias condition is required?",
+    "reference_answer": "A varactor is operated in reverse bias so its depletion-region capacitance changes with applied voltage. The circuit can use that voltage-dependent capacitance for tuning or sensing, while keeping the diode within its reverse-voltage and signal limits.",
+    "relevant_source_sections": [
+      "Semiconductors|3|Varicap or varactor diodes",
+      "Semiconductors|2|Junction diodes",
+      "Semiconductors|3|Diode ratings"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "sensor_interface_design",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "How does a photodiode produce an electrical signal from light, and why is its bias choice important?",
+    "reference_answer": "Incident light generates electron-hole pairs in the junction, producing a photocurrent related to the received light. Reverse bias is commonly used to improve response speed and linearity by widening the depletion region, but it increases the importance of leakage and breakdown limits.",
+    "relevant_source_sections": [
+      "Semiconductors|3|Photodiodes",
+      "Semiconductors|2|The P-N junction",
+      "Semiconductors|3|Diode ratings"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "optoelectronic_explanation",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "The LED in my indicator keeps failing. What circuit detail is probably missing, and how should the replacement resistor be chosen?",
+    "reference_answer": "An LED generally needs a current-limiting element because a small increase above its forward voltage can cause a large current increase. Choose the resistor from the supply voltage, expected LED forward voltage, and desired current, then verify resistor and LED power ratings and polarity.",
+    "relevant_source_sections": [
+      "Semiconductors|3|Light-emitting diodes",
+      "Semiconductors|3|Diode ratings",
+      "Electrical Reference|1|Ohm's and Joule's Laws"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "vague",
+    "scenario_type": "troubleshooting_and_component_selection",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "In a BJT amplifier, what does active-mode operation require, and why is biasing needed before applying a signal?",
+    "reference_answer": "Active-mode operation requires the base-emitter junction to be forward biased while the base-collector junction is reverse biased. Biasing establishes a suitable quiescent operating point so the signal can vary collector current without immediately driving the transistor into cutoff or saturation.",
+    "relevant_source_sections": [
+      "Semiconductors|4|Active mode operation",
+      "Semiconductors|4|Biasing techniques",
+      "Semiconductors|4|The common-emitter amplifier"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "transistor_biasing",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "How would you choose between a common-emitter and common-collector BJT stage for a voltage-buffer role?",
+    "reference_answer": "A common-emitter stage is suited to voltage gain but introduces phase inversion and usually has lower input and higher output impedance than a buffer. A common-collector stage, or emitter follower, provides approximately unity voltage gain, high input impedance, and low output impedance, making it the better buffer choice.",
+    "relevant_source_sections": [
+      "Semiconductors|4|The common-emitter amplifier",
+      "Semiconductors|4|The common-collector amplifier",
+      "Semiconductors|4|Amplifier impedances"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "amplifier_stage_selection",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "Why can thermal runaway occur in a BJT power stage, and what design practices reduce the risk?",
+    "reference_answer": "Increasing junction temperature can increase collector current or alter the bias point, which raises dissipation and can create a reinforcing feedback loop. Emitter resistance, appropriate bias compensation, heat sinking, current limiting, and staying within transistor thermal ratings reduce the risk.",
+    "relevant_source_sections": [
+      "Semiconductors|4|Thermal runaway",
+      "Semiconductors|4|Temperature drift",
+      "Semiconductors|4|Transistor ratings and packages"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "reliability_and_thermal_design",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A BJT circuit works at room temperature but its bias shifts badly when heated. Which biasing ideas should I investigate?",
+    "reference_answer": "Investigate emitter-bias and voltage-divider bias, temperature compensation, emitter resistance, and the transistor's temperature drift. A bias network that depends too strongly on base-emitter voltage or transistor beta is less stable, while feedback through the emitter resistor can improve stability.",
+    "relevant_source_sections": [
+      "Semiconductors|4|Temperature drift",
+      "Semiconductors|4|Emitter-bias",
+      "Semiconductors|4|Voltage divider bias",
+      "Semiconductors|4|Biasing calculations"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "vague",
+    "scenario_type": "analog_troubleshooting",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "What makes a common-source JFET stage different from a common-source MOSFET stage when selecting a high-impedance input device?",
+    "reference_answer": "Both use gate voltage to control channel current and can provide voltage gain, but their device physics and bias behavior differ. A JFET gate is a reverse-biased junction, while a MOSFET uses an insulated gate, so gate protection, input leakage, allowable gate voltage, and bias requirements must be checked for the chosen device.",
+    "relevant_source_sections": [
+      "Semiconductors|2|Junction field-effect transistors",
+      "Semiconductors|2|Insulated-gate field-effect transistors (MOSFET)",
+      "Semiconductors|4|Amplifier impedances"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "transistor_family_selection",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "What does negative feedback change in an operational amplifier circuit, and why is it normally preferred for linear amplification?",
+    "reference_answer": "Negative feedback feeds part of the output back in opposition to the input difference. It sets a predictable closed-loop relationship, reduces sensitivity to open-loop gain variation, improves linearity, and can alter bandwidth and impedances, provided the circuit remains stable.",
+    "relevant_source_sections": [
+      "Semiconductors|8|Negative feedback",
+      "Semiconductors|8|Operational amplifier models",
+      "Semiconductors|8|Practical considerations"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "op_amp_feedback_explanation",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "My precision op-amp circuit has a nonzero output even when both inputs are tied together. What nonideal parameters could explain it?",
+    "reference_answer": "Input offset voltage, input bias currents, common-mode gain, and drift can create an output even with equal input voltages. The error depends on the source and feedback resistances, temperature, common-mode range, and the particular op-amp model.",
+    "relevant_source_sections": [
+      "Semiconductors|8|Offset voltage",
+      "Semiconductors|8|Bias current",
+      "Semiconductors|8|Common-mode gain",
+      "Semiconductors|8|Drift"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "precision_analog_troubleshooting",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "When is an instrumentation amplifier a better choice than a single-ended voltage amplifier for a small sensor signal?",
+    "reference_answer": "An instrumentation amplifier is preferable when the desired signal is differential and rides on a potentially large common-mode voltage. Its architecture is intended to provide high input impedance, controlled differential gain, and strong common-mode rejection, subject to input-range and resistor-matching limits.",
+    "relevant_source_sections": [
+      "Semiconductors|8|The instrumentation amplifier",
+      "Semiconductors|8|Single-ended and differential amplifiers",
+      "Semiconductors|8|Common-mode gain"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "sensor_amplifier_selection",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "If an op-amp must turn a square wave into a ramp, what feedback function is relevant and what practical limitation should be considered?",
+    "reference_answer": "An op-amp integrator produces an output proportional to the time integral of the input, so a constant level from a square wave creates a ramp. A practical circuit must control DC buildup and account for saturation, finite bandwidth, slew rate, and component tolerances.",
+    "relevant_source_sections": [
+      "Semiconductors|8|Differentiator and integrator circuits",
+      "Electrical Reference|7|Op-amp integrator with squarewave input",
+      "Experiments|6|Integrator"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "waveform_conditioning_design",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "I need to remove slow drift from a sensor but keep its faster changes. Should I start with a high-pass or low-pass filter, and why?",
+    "reference_answer": "Start with a high-pass filter because it attenuates low-frequency and DC components while passing faster changes above its cutoff. The cutoff must be chosen from the sensor's drift spectrum and the fastest signal content, with attention to phase shift and loading.",
+    "relevant_source_sections": [
+      "Alternating Current|8|High-pass filters",
+      "Alternating Current|8|What is a filter?",
+      "Semiconductors|10|ACTIVE FILTERS"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "filter_selection",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "What is the difference between a band-pass and a band-stop filter in terms of the frequencies they preserve?",
+    "reference_answer": "A band-pass filter passes a selected range between lower and upper cutoff frequencies while attenuating frequencies outside that range. A band-stop filter rejects a selected band and passes frequencies below and above it.",
+    "relevant_source_sections": [
+      "Alternating Current|8|Band-pass filters",
+      "Alternating Current|8|Band-stop filters",
+      "Alternating Current|8|What is a filter?"
+    ],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "filter_concept_comparison",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "Why would an active two-pole filter be chosen instead of a single passive RC section when a design needs sharper selectivity?",
+    "reference_answer": "A two-pole response can provide a steeper transition and a more controlled frequency response than a single-pole RC section. An active implementation can also provide buffering or gain, but it requires a suitable powered amplifier and introduces op-amp bandwidth, stability, noise, and output-swing constraints.",
+    "relevant_source_sections": [
+      "Semiconductors|10|ACTIVE FILTERS",
+      "Semiconductors|10|Two pole active filters",
+      "Alternating Current|8|Resonant filters"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "filter_architecture_selection",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "What are the main differences between a linear power supply and a switching power supply, and what would make one a better fit for a heat-sensitive product?",
+    "reference_answer": "A linear supply regulates by dissipating excess voltage, usually making low noise and simple behavior at the cost of efficiency and heat. A switching supply transfers energy through high-frequency switching and can be much more efficient and cooler, but it brings ripple, EMI, filtering, and control complexity.",
+    "relevant_source_sections": [
+      "Semiconductors|9|Linear power supplies",
+      "Semiconductors|9|Power Supply types",
+      "Semiconductors|9|Power Supply Introduction"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "power_supply_architecture_selection",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "A rectifier output sags and has large ripple under load. Which blocks of a basic supply should I inspect, and what measurements distinguish them?",
+    "reference_answer": "Inspect the transformer or source, rectifier diodes, reservoir capacitor and filter network, regulator, wiring, and load. Measure AC input and secondary voltage, rectified DC before filtering, ripple across the capacitor, regulated output, and load current to separate source, rectifier, filtering, regulation, and overload faults.",
+    "relevant_source_sections": [
+      "Experiments|4|Transformer -- power supply",
+      "Experiments|5|Rectifier/filter circuit",
+      "Experiments|5|Voltage regulator",
+      "Electrical Reference|8|Power supply problems"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "power_supply_troubleshooting",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "For a small DC supply from an AC transformer, how does adding a capacitor after the rectifier change the output, and what tradeoffs should guide its value?",
+    "reference_answer": "The capacitor charges near the rectified peaks and supplies load current between peaks, raising the average DC level and reducing ripple. A larger capacitor usually reduces ripple but increases charging surge, diode and transformer stress, startup time, physical size, and stored energy.",
+    "relevant_source_sections": [
+      "Experiments|5|Rectifier/filter circuit",
+      "Experiments|5|Full-wave bridge rectifier",
+      "Electrical Reference|1|Capacitor sizing equation",
+      "Electrical Reference|1|AC power"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "power_supply_component_selection",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "I want a transistor stage, an op-amp stage, and a filter, but I have not said the signal level, bandwidth, supply rails, load, or noise target. What should be specified before selecting components?",
+    "reference_answer": "No unique component choice is justified yet. Specify source and load impedance, signal amplitude and bias range, required gain, bandwidth or cutoff frequencies, allowable distortion and noise, supply voltage and current, temperature range, protection needs, and physical or cost constraints. Those requirements determine whether a BJT, JFET, MOSFET, op-amp, passive filter, or active filter is appropriate and set component ratings and values.",
+    "relevant_source_sections": [
+      "Semiconductors|1|Amplifiers",
+      "Semiconductors|4|Amplifier impedances",
+      "Semiconductors|8|Practical considerations",
+      "Semiconductors|10|Two pole active filters",
+      "Semiconductors|4|Transistor ratings and packages"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "ambiguous",
+    "scenario_type": "underspecified_design_request",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "The power supply is 'kind of noisy' and the amplifier 'sounds wrong.' What information would you need before deciding whether the problem is the supply, filter, bias, or amplifier stage?",
+    "reference_answer": "Ask for the supply topology and rails, measured DC and ripple under load, load current, grounding and wiring, amplifier input and output waveforms, gain and bandwidth, bias voltages, symptoms versus frequency and load, recent changes, and whether the fault follows a stage when sections are tested separately. Without those details, several causes remain plausible.",
+    "relevant_source_sections": [
+      "Electrical Reference|8|Power supply problems",
+      "Electrical Reference|8|Divide system into sections and test those sections",
+      "Electrical Reference|8|Trap a signal",
+      "Semiconductors|8|Practical considerations"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "vague",
+    "scenario_type": "underspecified_troubleshooting_request",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "For an audio input that must not load a high-impedance sensor, what amplifier characteristics and circuit arrangement should guide the choice?",
+    "reference_answer": "Prefer an input stage with high input impedance and low input bias current so the sensor is not significantly loaded. A voltage follower or other appropriately feedback-controlled buffer can provide near-unity voltage gain and a lower output impedance to drive the next stage, while its bandwidth, noise, offset, and supply range must also fit the signal.",
+    "relevant_source_sections": [
+      "Experiments|5|Voltage follower",
+      "Semiconductors|4|Amplifier impedances",
+      "Semiconductors|8|Bias current",
+      "Semiconductors|8|Practical considerations"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "buffer_component_selection",
+    "expected_retrieval_hops": "2"
+  }
+]

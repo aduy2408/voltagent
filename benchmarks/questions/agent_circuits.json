@@ -1,0 +1,312 @@
+[
+  {
+    "question": "A 12 V source feeds 3 ohm and 9 ohm resistors in series. What current flows through the circuit, and what voltage appears across the 9 ohm resistor?",
+    "reference_answer": "The total resistance is 12 ohms, so the series current is 1 A. The 9 ohm resistor drops 9 V.",
+    "relevant_source_sections": [
+      "Direct Current|5|Simple series circuits",
+      "Direct Current|2|How voltage, current, and resistance relate",
+      "Direct Current|6|Voltage divider circuits"
+    ],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "series-circuit calculation",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "Two 6 ohm resistors are connected in parallel across a 12 V supply. Find the equivalent resistance and the total source current.",
+    "reference_answer": "The parallel equivalent is 3 ohms. The source current is 12 V divided by 3 ohms, or 4 A.",
+    "relevant_source_sections": [
+      "Direct Current|5|Simple parallel circuits",
+      "Electrical Reference|1|Series and parallel resistances"
+    ],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "parallel-circuit calculation",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "At a node, 2.4 A and 0.8 A enter while 1.5 A leaves through one branch. What current must leave through the remaining branch?",
+    "reference_answer": "By KCL, total entering current is 3.2 A. The remaining branch must carry 1.7 A leaving the node.",
+    "relevant_source_sections": [
+      "Direct Current|6|Kirchhoff's Current Law (KCL)",
+      "Electrical Reference|1|Kirchhoff's Laws"
+    ],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "KCL node calculation",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "A 24 V loop contains a 10 V source rise and resistor drops of 6 V and 8 V. Is the loop consistent with Kirchhoff's Voltage Law?",
+    "reference_answer": "No. The algebraic sum is 24 - 6 - 8 = 10 V, not zero, so a stated voltage, polarity, or measurement is missing or incorrect.",
+    "relevant_source_sections": [
+      "Direct Current|6|Kirchhoff's Voltage Law (KVL)",
+      "Electrical Reference|1|Kirchhoff's Laws"
+    ],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "KVL troubleshooting",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "Why does opening one resistor branch in a parallel network usually leave the voltage across the other branch unchanged but reduce the source current?",
+    "reference_answer": "Parallel branches share the same two nodes, so an ideal voltage source maintains the other branch voltage. Removing one branch increases equivalent resistance and removes that branch's current from the source total.",
+    "relevant_source_sections": [
+      "Direct Current|5|Simple parallel circuits",
+      "Direct Current|5|Component failure analysis"
+    ],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "component-failure reasoning",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A 10 V divider uses 1 kΩ on top and 4 kΩ on the bottom. The output is measured at their junction relative to the negative terminal. What output should be expected with no load?",
+    "reference_answer": "The output is across the 4 kΩ resistor: 10 V multiplied by 4/(1+4), which is 8 V.",
+    "relevant_source_sections": [
+      "Direct Current|6|Voltage divider circuits",
+      "Direct Current|2|How voltage, current, and resistance relate"
+    ],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "voltage-divider calculation",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "A loaded voltage divider gives a much lower output than its no-load calculation. What circuit change explains this, and how should the load be included in the analysis?",
+    "reference_answer": "The load is in parallel with the divider resistor across which the output is taken, reducing that resistor's effective value. Replace it with the parallel combination before applying the divider calculation.",
+    "relevant_source_sections": [
+      "Direct Current|6|Voltage divider circuits",
+      "Direct Current|7|Analysis technique"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "loaded-divider troubleshooting",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "For a three-branch DC network with unknown branch currents, when is the branch-current method preferable to simply combining resistors in series and parallel?",
+    "reference_answer": "Use the branch-current method when the topology cannot be reduced by series-parallel combinations, especially when multiple sources or shared branches create coupled loops. Assign branch currents and write KCL and KVL equations.",
+    "relevant_source_sections": [
+      "Direct Current|10|What is network analysis?",
+      "Direct Current|10|Branch current method"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "method-selection",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "In mesh analysis, two adjacent meshes share a resistor R. If clockwise mesh currents are I1 and I2, what current should be used for the voltage drop across the shared resistor in mesh 1?",
+    "reference_answer": "The shared-branch current, referenced in mesh 1's direction, is I1 - I2 when the mesh currents oppose each other in that branch. The voltage term is R(I1 - I2).",
+    "relevant_source_sections": [
+      "Direct Current|10|Mesh current method",
+      "Direct Current|10|Mesh Current, conventional method"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "mesh-equation setup",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "A node is connected to ground through 2 kΩ, to a 10 V node through 4 kΩ, and to a 5 V node through 1 kΩ. What equation would the node-voltage method use for the unknown node voltage V?",
+    "reference_answer": "Using currents leaving or entering consistently, one valid equation is V/2000 + (V-10)/4000 + (V-5)/1000 = 0.",
+    "relevant_source_sections": [
+      "Direct Current|10|Node voltage method",
+      "Direct Current|6|Kirchhoff's Current Law (KCL)"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "nodal-analysis calculation",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A source network has a 12 V open-circuit terminal voltage and a 3 Ω resistance seen from the terminals. What load resistance receives maximum power, and why?",
+    "reference_answer": "The load should be 3 Ω, equal to the Thevenin resistance. At that match, the load receives the maximum available power from the linear source network.",
+    "relevant_source_sections": [
+      "Direct Current|10|Thevenin's Theorem",
+      "Direct Current|10|Maximum Power Transfer Theorem"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "network-theorem design",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "How would you find the Norton equivalent of a linear two-terminal network if you already know its Thevenin voltage and resistance?",
+    "reference_answer": "Use the same equivalent resistance and convert the source: Norton current is I_N = V_TH/R_TH, with R_N = R_TH. The Norton source is placed in parallel with that resistance.",
+    "relevant_source_sections": [
+      "Direct Current|10|Thevenin-Norton equivalencies",
+      "Direct Current|10|Norton's Theorem"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "equivalent-circuit conversion",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "A circuit contains two independent voltage sources and one resistor load. How can superposition determine the load current without solving the full simultaneous system at once?",
+    "reference_answer": "Analyze one independent source at a time, replacing other ideal voltage sources with shorts and ideal current sources with opens. Find each resulting load-current contribution and algebraically add them with signs.",
+    "relevant_source_sections": [
+      "Direct Current|10|Superposition Theorem",
+      "Direct Current|10|Introduction to network theorems"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "superposition troubleshooting",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A resistor network is drawn as a triangle, but none of its resistors can be combined directly in series or parallel. Which transformation can make the network reducible, and what must be preserved?",
+    "reference_answer": "Use a Δ-Y or Y-Δ conversion. The transformation must preserve the terminal behavior between the three external connection points, including the currents and voltages seen by the rest of the circuit.",
+    "relevant_source_sections": [
+      "Direct Current|10|Δ-Y and Y-Δ conversions",
+      "Direct Current|10|What is network analysis?"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "topology-reduction strategy",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A technician says two resistors are in series because they are drawn next to each other. What electrical test should be used to verify the claim before combining them?",
+    "reference_answer": "Verify that their shared junction has no other connection. Components are in series only when the same current must flow through both, not merely because of their physical drawing position.",
+    "relevant_source_sections": [
+      "Direct Current|5|What are \"series\" and \"parallel\" circuits?",
+      "Direct Current|7|Re-drawing complex schematics"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "vague",
+    "scenario_type": "schematic-interpretation troubleshooting",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A 5 V step is applied to a series RC circuit with R = 10 kΩ and C = 100 μF. What are the time constant and approximate capacitor voltage after one time constant?",
+    "reference_answer": "The time constant is RC = 1 s. After one time constant during charging, the capacitor is about 63% of its final value, or approximately 3.16 V.",
+    "relevant_source_sections": [
+      "Direct Current|16|Electrical transients",
+      "Direct Current|16|Capacitor transient response",
+      "Electrical Reference|1|Value of time constant in series RC and RL circuits"
+    ],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "RC charging calculation",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A charged capacitor is disconnected from its source and discharged through a resistor. What happens to capacitor voltage and current direction as time passes?",
+    "reference_answer": "The capacitor voltage decays toward zero exponentially. The discharge current initially has its largest magnitude and then decreases toward zero, with its reference sign determined by the chosen polarity and current direction.",
+    "relevant_source_sections": [
+      "Direct Current|16|Capacitor transient response",
+      "Electrical Reference|1|Calculating voltage or current at specified time"
+    ],
+    "difficulty": "easy",
+    "intent_clarity": "clear",
+    "scenario_type": "RC discharge explanation",
+    "expected_retrieval_hops": "1"
+  },
+  {
+    "question": "An RC timing circuit must reach 90% of its final voltage in about 4.6 seconds. If R is fixed at 47 kΩ, what capacitance is approximately required?",
+    "reference_answer": "Reaching 90% takes about 2.3 time constants, so tau is about 2.0 s. C = tau/R ≈ 2.0/47000 ≈ 42.6 μF, so a nearby standard value around 47 μF is reasonable before tolerance checks.",
+    "relevant_source_sections": [
+      "Direct Current|16|Capacitor transient response",
+      "Direct Current|16|Solving for unknown time",
+      "Electrical Reference|1|Capacitor sizing equation"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "RC component-sizing calculation",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "An inductor initially carries 2 A in an L/R circuit. What qualitative behavior should be expected immediately after a switch opens, and what sets the speed of the current decay?",
+    "reference_answer": "Inductor current cannot change instantaneously, so it initially continues near 2 A and may create a large voltage if no safe current path exists. The decay speed is set by the L/R time constant.",
+    "relevant_source_sections": [
+      "Direct Current|16|Inductor transient response",
+      "Direct Current|16|Why L/R and not LR?",
+      "Electrical Reference|1|Value of time constant in series RC and RL circuits"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "RL switching troubleshooting",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "A relay coil has L = 200 mH and its winding resistance is 40 Ω. Estimate the RL time constant and the fraction of final current after three time constants.",
+    "reference_answer": "The time constant is L/R = 0.2/40 = 0.005 s, or 5 ms. After three time constants, current has reached about 95% of its final value during energization.",
+    "relevant_source_sections": [
+      "Direct Current|16|Inductor transient response",
+      "Electrical Reference|1|Value of time constant in series RC and RL circuits",
+      "Electrical Reference|1|Calculating voltage or current at specified time"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "RL transient calculation",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "The capacitor in a real RC circuit seems to charge more slowly than expected, even though the resistor and capacitor labels look correct. What hidden circuit feature should be checked first?",
+    "reference_answer": "Check for additional resistance in series with the charging path, including source resistance, meter resistance, wiring, or a load. The effective resistance and capacitance determine the actual time constant.",
+    "relevant_source_sections": [
+      "Direct Current|16|Capacitor transient response",
+      "Direct Current|16|Complex circuits",
+      "Direct Current|8|Voltmeter impact on measured circuit"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "vague",
+    "scenario_type": "RC measurement troubleshooting",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "A voltmeter connected across a high-resistance divider changes the divider output noticeably. Why does this happen, and what design change reduces the error?",
+    "reference_answer": "The voltmeter's finite input resistance is placed in parallel with the divider portion being measured, loading it and changing the ratio. Use a higher-input-resistance meter or lower divider resistance values when power and loading limits permit.",
+    "relevant_source_sections": [
+      "Direct Current|8|Voltmeter impact on measured circuit",
+      "Direct Current|6|Voltage divider circuits"
+    ],
+    "difficulty": "medium",
+    "intent_clarity": "clear",
+    "scenario_type": "instrument-loading troubleshooting",
+    "expected_retrieval_hops": "2"
+  },
+  {
+    "question": "The circuit is 'not working' and the only information provided is that the output is low. What measurements and topology details are needed before deciding whether the fault is a resistor, an open branch, or a wiring error?",
+    "reference_answer": "The diagnosis is underspecified. Request the source voltage, schematic and node connections, expected and measured node voltages, branch currents, resistor values, load state, meter reference point, and whether continuity or supply checks pass. Then apply Ohm's law, KCL/KVL, and failure-analysis rules.",
+    "relevant_source_sections": [
+      "Direct Current|5|Component failure analysis",
+      "Direct Current|7|Component failure analysis",
+      "Direct Current|8|Multimeters",
+      "Electrical Reference|1|Kirchhoff's Laws"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "ambiguous",
+    "scenario_type": "underspecified troubleshooting request",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "A source, an unknown resistor, and a 2 kΩ load form a two-terminal linear network. The open-circuit voltage is 6 V and the short-circuit current is 3 mA. What load voltage should be predicted?",
+    "reference_answer": "The equivalent resistance is V_OC/I_SC = 6 V/0.003 A = 2 kΩ. With a 2 kΩ load, the Thevenin divider gives 6 V multiplied by 2/(2+2) = 3 V.",
+    "relevant_source_sections": [
+      "Direct Current|10|Thevenin's Theorem",
+      "Direct Current|10|Thevenin-Norton equivalencies",
+      "Direct Current|6|Voltage divider circuits"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "clear",
+    "scenario_type": "Thevenin calculation from measurements",
+    "expected_retrieval_hops": "3+"
+  },
+  {
+    "question": "A series RC circuit has a measured time constant twice the design value. What combinations of component or wiring changes could cause that observation?",
+    "reference_answer": "Because tau equals effective R times effective C, doubling either effective resistance or capacitance, or a combination whose product doubles, can explain it. Extra series resistance, an unintended parallel capacitor, or component tolerance should be checked.",
+    "relevant_source_sections": [
+      "Direct Current|16|Electrical transients",
+      "Direct Current|16|Complex circuits",
+      "Electrical Reference|1|Value of time constant in series RC and RL circuits"
+    ],
+    "difficulty": "hard",
+    "intent_clarity": "vague",
+    "scenario_type": "transient fault isolation",
+    "expected_retrieval_hops": "3+"
+  }
+]
