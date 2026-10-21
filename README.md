@@ -143,6 +143,53 @@ curl -s http://127.0.0.1:8000/health
 # {"status":"ok"}
 ```
 
+## Docker
+
+The repository provides separate CPU and GPU images. Both images expose port `8000`, include
+the FastAPI application and frontend, and exclude secrets, datasets, model weights, benchmark
+outputs, and local databases from the build context. The CPU image runs as a non-root user.
+
+### CPU image
+
+The CPU image is the smallest runtime. It includes the core API, calculators, session
+storage, and safe fallback retrieval path, but does not install the heavyweight dense or
+vision extras.
+
+```bash
+docker build -t voltagent:cpu -f Dockerfile .
+docker run --rm --env-file .env -p 8000:8000 \
+  -v "$(pwd)/data:/app/data" voltagent:cpu
+```
+
+### GPU image
+
+The GPU image is based on the PyTorch CUDA 12.4 and cuDNN 9 runtime image. It adds dense
+retrieval dependencies, Ultralytics, and ONNX Runtime GPU without redownloading the large
+CUDA PyTorch stack during the application image build. Run it with the NVIDIA Container
+Toolkit available on the host.
+
+```bash
+docker build -t voltagent:gpu -f Dockerfile.gpu .
+docker run --rm --gpus all --env-file .env -p 8000:8000 \
+  -v "$(pwd)/data:/app/data" voltagent:gpu
+```
+
+The GPU base image provides CUDA-enabled PyTorch 2.6.0. TensorRT engines remain
+hardware-specific and should be built and mounted on the target machine.
+
+### Compose profiles
+
+```bash
+cp .env.example .env
+# edit .env with the provider configuration
+docker compose --profile cpu up --build
+# or
+docker compose --profile gpu up --build
+```
+
+The `data/` volume persists SQLite sessions, uploads, local indexes, and optional model
+artifacts. Both images report health through `GET /health`.
+
 ## Configuration
 
 The main settings are loaded from `.env` through `app.config.Settings`.
